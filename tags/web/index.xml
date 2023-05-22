@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>web on CyberKoopas</title>
-    <link>https://cyberkoopas.github.io/tags/web/</link>
+    <link>https://www.cyberkoopas.fr/tags/web/</link>
     <description>Recent content in web on CyberKoopas</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 06 May 2023 22:40:02 +0200</lastBuildDate><atom:link href="https://cyberkoopas.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 May 2023 22:40:02 +0200</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netsapp</title>
-      <link>https://cyberkoopas.github.io/posts/nestapp/</link>
+      <link>https://www.cyberkoopas.fr/posts/nestapp/</link>
       <pubDate>Sat, 06 May 2023 22:40:02 +0200</pubDate>
       
-      <guid>https://cyberkoopas.github.io/posts/nestapp/</guid>
+      <guid>https://www.cyberkoopas.fr/posts/nestapp/</guid>
       <description>Challenge information </description>
     </item>
     

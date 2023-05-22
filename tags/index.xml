@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on CyberKoopas</title>
-    <link>https://cyberkoopas.github.io/tags/</link>
+    <link>https://www.cyberkoopas.fr/tags/</link>
     <description>Recent content in Tags on CyberKoopas</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 06 May 2023 22:40:02 +0200</lastBuildDate><atom:link href="https://cyberkoopas.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 May 2023 22:40:02 +0200</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>pwnme</title>
-      <link>https://cyberkoopas.github.io/tags/pwnme/</link>
+      <link>https://www.cyberkoopas.fr/tags/pwnme/</link>
       <pubDate>Sat, 06 May 2023 22:40:02 +0200</pubDate>
       
-      <guid>https://cyberkoopas.github.io/tags/pwnme/</guid>
+      <guid>https://www.cyberkoopas.fr/tags/pwnme/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web</title>
-      <link>https://cyberkoopas.github.io/tags/web/</link>
+      <link>https://www.cyberkoopas.fr/tags/web/</link>
       <pubDate>Sat, 06 May 2023 22:40:02 +0200</pubDate>
       
-      <guid>https://cyberkoopas.github.io/tags/web/</guid>
+      <guid>https://www.cyberkoopas.fr/tags/web/</guid>
       <description></description>
     </item>
     
