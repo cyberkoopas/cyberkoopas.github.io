@@ -14,9 +14,6 @@
     <loc>https://www.cyberkoopas.fr/posts/</loc>
     <lastmod>2023-05-06T22:40:02+02:00</lastmod>
   </url><url>
-    <loc>https://www.cyberkoopas.fr/tags/pwnme/</loc>
-    <lastmod>2023-05-06T22:40:02+02:00</lastmod>
-  </url><url>
     <loc>https://www.cyberkoopas.fr/tags/</loc>
     <lastmod>2023-05-06T22:40:02+02:00</lastmod>
   </url><url>
@@ -25,5 +22,17 @@
   </url><url>
     <loc>https://www.cyberkoopas.fr/categories/writeups/</loc>
     <lastmod>2023-05-06T22:40:02+02:00</lastmod>
+  </url><url>
+    <loc>https://www.cyberkoopas.fr/tags/x-pwnme/</loc>
+    <lastmod>2023-05-06T22:40:02+02:00</lastmod>
+  </url><url>
+    <loc>https://www.cyberkoopas.fr/tags/crypto/</loc>
+    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cyberkoopas.fr/tags/x-davincictf/</loc>
+    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cyberkoopas.fr/posts/dvctf-xor_vigenere/</loc>
+    <lastmod>2023-03-11T00:00:00+00:00</lastmod>
   </url>
 </urlset>

@@ -7,20 +7,38 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 06 May 2023 22:40:02 +0200</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>pwnme</title>
-      <link>https://www.cyberkoopas.fr/tags/pwnme/</link>
-      <pubDate>Sat, 06 May 2023 22:40:02 +0200</pubDate>
-      
-      <guid>https://www.cyberkoopas.fr/tags/pwnme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>web</title>
       <link>https://www.cyberkoopas.fr/tags/web/</link>
       <pubDate>Sat, 06 May 2023 22:40:02 +0200</pubDate>
       
       <guid>https://www.cyberkoopas.fr/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>x-pwnme</title>
+      <link>https://www.cyberkoopas.fr/tags/x-pwnme/</link>
+      <pubDate>Sat, 06 May 2023 22:40:02 +0200</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/tags/x-pwnme/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>crypto</title>
+      <link>https://www.cyberkoopas.fr/tags/crypto/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/tags/crypto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>x-DaVinciCTF</title>
+      <link>https://www.cyberkoopas.fr/tags/x-davincictf/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/tags/x-davincictf/</guid>
       <description></description>
     </item>
     
