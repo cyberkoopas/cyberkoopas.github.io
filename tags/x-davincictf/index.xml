@@ -8,20 +8,20 @@
     <lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/x-davincictf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Principiante</title>
-      <link>https://www.cyberkoopas.fr/posts/dvctf-principiante/</link>
+      <link>https://www.cyberkoopas.fr/posts/dvctf/dvctf-principiante/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.cyberkoopas.fr/posts/dvctf-principiante/</guid>
+      <guid>https://www.cyberkoopas.fr/posts/dvctf/dvctf-principiante/</guid>
       <description>Challenge information Summary You have to give the correct answer 12 times in a row with a 1s timeout between each answer. Base keyboard is :
 _____________________________ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |_| |_| | |_| |_| |_| | | | | | | | | | | | | | | | | | |___|___|___|___|___|___|___| Examples of expected answers :</description>
     </item>
     
     <item>
       <title>XOR Vigenere</title>
-      <link>https://www.cyberkoopas.fr/posts/dvctf-xor_vigenere/</link>
+      <link>https://www.cyberkoopas.fr/posts/dvctf/dvctf-xor_vigenere/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.cyberkoopas.fr/posts/dvctf-xor_vigenere/</guid>
+      <guid>https://www.cyberkoopas.fr/posts/dvctf/dvctf-xor_vigenere/</guid>
       <description>Challenge information Summary Context : Leonard forgot to tell you the key he used to encrypt his message.
 Would you be able to recover the message he sent you ?
 Flag format: dvCTF{REDACTED} found in the message

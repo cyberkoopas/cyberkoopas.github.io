@@ -8,10 +8,10 @@
     <lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/crypto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>XOR Vigenere</title>
-      <link>https://www.cyberkoopas.fr/posts/dvctf-xor_vigenere/</link>
+      <link>https://www.cyberkoopas.fr/posts/dvctf/dvctf-xor_vigenere/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.cyberkoopas.fr/posts/dvctf-xor_vigenere/</guid>
+      <guid>https://www.cyberkoopas.fr/posts/dvctf/dvctf-xor_vigenere/</guid>
       <description>Challenge information Summary Context : Leonard forgot to tell you the key he used to encrypt his message.
 Would you be able to recover the message he sent you ?
 Flag format: dvCTF{REDACTED} found in the message

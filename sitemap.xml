@@ -3,33 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.cyberkoopas.fr/categories/</loc>
-    <lastmod>2023-05-06T22:40:02+02:00</lastmod>
+    <lastmod>2023-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cyberkoopas.fr/</loc>
-    <lastmod>2023-05-06T22:40:02+02:00</lastmod>
+    <lastmod>2023-05-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.cyberkoopas.fr/posts/nestapp/</loc>
-    <lastmod>2023-05-06T22:40:02+02:00</lastmod>
+    <loc>https://www.cyberkoopas.fr/posts/pwnme/nestapp/</loc>
+    <lastmod>2023-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cyberkoopas.fr/posts/</loc>
-    <lastmod>2023-05-06T22:40:02+02:00</lastmod>
+    <lastmod>2023-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cyberkoopas.fr/tags/</loc>
-    <lastmod>2023-05-06T22:40:02+02:00</lastmod>
+    <lastmod>2023-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cyberkoopas.fr/tags/web/</loc>
-    <lastmod>2023-05-06T22:40:02+02:00</lastmod>
+    <lastmod>2023-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cyberkoopas.fr/categories/writeups/</loc>
-    <lastmod>2023-05-06T22:40:02+02:00</lastmod>
+    <lastmod>2023-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cyberkoopas.fr/tags/x-pwnme/</loc>
-    <lastmod>2023-05-06T22:40:02+02:00</lastmod>
+    <lastmod>2023-05-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cyberkoopas.fr/tags/crypto/</loc>
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.cyberkoopas.fr/posts/dvctf-principiante/</loc>
+    <loc>https://www.cyberkoopas.fr/posts/dvctf/dvctf-principiante/</loc>
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.cyberkoopas.fr/tags/programming/</loc>
@@ -38,7 +38,9 @@
     <loc>https://www.cyberkoopas.fr/tags/x-davincictf/</loc>
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.cyberkoopas.fr/posts/dvctf-xor_vigenere/</loc>
+    <loc>https://www.cyberkoopas.fr/posts/dvctf/dvctf-xor_vigenere/</loc>
     <lastmod>2023-03-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.cyberkoopas.fr/timeline/</loc>
   </url>
 </urlset>

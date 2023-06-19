@@ -5,38 +5,39 @@
     <link>https://www.cyberkoopas.fr/</link>
     <description>Recent content on CyberKoopas</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 06 May 2023 22:40:02 +0200</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netsapp</title>
-      <link>https://www.cyberkoopas.fr/posts/nestapp/</link>
-      <pubDate>Sat, 06 May 2023 22:40:02 +0200</pubDate>
+      <link>https://www.cyberkoopas.fr/posts/pwnme/nestapp/</link>
+      <pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.cyberkoopas.fr/posts/nestapp/</guid>
+      <guid>https://www.cyberkoopas.fr/posts/pwnme/nestapp/</guid>
       <description>Challenge information </description>
     </item>
     
     <item>
       <title>Principiante</title>
-      <link>https://www.cyberkoopas.fr/posts/dvctf-principiante/</link>
+      <link>https://www.cyberkoopas.fr/posts/dvctf/dvctf-principiante/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.cyberkoopas.fr/posts/dvctf-principiante/</guid>
+      <guid>https://www.cyberkoopas.fr/posts/dvctf/dvctf-principiante/</guid>
       <description>Challenge information Summary You have to give the correct answer 12 times in a row with a 1s timeout between each answer. Base keyboard is :
 _____________________________ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |_| |_| | |_| |_| |_| | | | | | | | | | | | | | | | | | |___|___|___|___|___|___|___| Examples of expected answers :</description>
     </item>
     
     <item>
       <title>XOR Vigenere</title>
-      <link>https://www.cyberkoopas.fr/posts/dvctf-xor_vigenere/</link>
+      <link>https://www.cyberkoopas.fr/posts/dvctf/dvctf-xor_vigenere/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.cyberkoopas.fr/posts/dvctf-xor_vigenere/</guid>
+      <guid>https://www.cyberkoopas.fr/posts/dvctf/dvctf-xor_vigenere/</guid>
       <description>Challenge information Summary Context : Leonard forgot to tell you the key he used to encrypt his message.
 Would you be able to recover the message he sent you ?
 Flag format: dvCTF{REDACTED} found in the message
 Attached files message 00011010001111010100110001110000001100000101100100100111011100100101000000100100011101010001000000010111001110100101110001110000001100100101110000100010001101010001100100111001001001110001000000100111001001000111101000000100000100100100101101111011011000100110101101100011000100000110111100001000011000010110000000001111011001010000010100011100000110010000101000001001000010110111110100011010000011010111111100000010011001010000001100001101000101100100010001111110011101000110011100100110001111100101010101110000001100000101111100101101001101110001100101110001 Solution Firstly, we can convert the ASCII message file to a binary file (message.bin). It&amp;rsquo;s possible with CyberChef. Select operation From Binary and download file. Cyberchef parameters :
 Delimiter: None Byte Length : 8 We know the flag format is dvCTF{REDACTED}, we can perform a XOR Known plaintext attack.</description>
     </item>
+    
     
   </channel>
 </rss>

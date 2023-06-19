@@ -5,32 +5,32 @@
     <link>https://www.cyberkoopas.fr/categories/writeups/</link>
     <description>Recent content in writeups on CyberKoopas</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 06 May 2023 22:40:02 +0200</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/categories/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/categories/writeups/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Netsapp</title>
-      <link>https://www.cyberkoopas.fr/posts/nestapp/</link>
-      <pubDate>Sat, 06 May 2023 22:40:02 +0200</pubDate>
+      <link>https://www.cyberkoopas.fr/posts/pwnme/nestapp/</link>
+      <pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.cyberkoopas.fr/posts/nestapp/</guid>
+      <guid>https://www.cyberkoopas.fr/posts/pwnme/nestapp/</guid>
       <description>Challenge information </description>
     </item>
     
     <item>
       <title>Principiante</title>
-      <link>https://www.cyberkoopas.fr/posts/dvctf-principiante/</link>
+      <link>https://www.cyberkoopas.fr/posts/dvctf/dvctf-principiante/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.cyberkoopas.fr/posts/dvctf-principiante/</guid>
+      <guid>https://www.cyberkoopas.fr/posts/dvctf/dvctf-principiante/</guid>
       <description>Challenge information Summary You have to give the correct answer 12 times in a row with a 1s timeout between each answer. Base keyboard is :
 _____________________________ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |_| |_| | |_| |_| |_| | | | | | | | | | | | | | | | | | |___|___|___|___|___|___|___| Examples of expected answers :</description>
     </item>
     
     <item>
       <title>XOR Vigenere</title>
-      <link>https://www.cyberkoopas.fr/posts/dvctf-xor_vigenere/</link>
+      <link>https://www.cyberkoopas.fr/posts/dvctf/dvctf-xor_vigenere/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.cyberkoopas.fr/posts/dvctf-xor_vigenere/</guid>
+      <guid>https://www.cyberkoopas.fr/posts/dvctf/dvctf-xor_vigenere/</guid>
       <description>Challenge information Summary Context : Leonard forgot to tell you the key he used to encrypt his message.
 Would you be able to recover the message he sent you ?
 Flag format: dvCTF{REDACTED} found in the message
