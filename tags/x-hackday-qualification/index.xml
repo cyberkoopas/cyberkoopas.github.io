@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>x-hackday-qualification on CyberKoopas</title>
+    <link>https://www.cyberkoopas.fr/tags/x-hackday-qualification/</link>
+    <description>Recent content in x-hackday-qualification on CyberKoopas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/x-hackday-qualification/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trusted</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-qualification/trusted/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-qualification/trusted/</guid>
+      <description>Challenge information Summary The situation is bad. The magistrate database from the Sagittarius sector has been leaked! The incident response team continues to see unknown connections in the logs from outside the sector, even though the passwords have all been changed. We suspect the problem is with the authentication portal&amp;hellip; Do something about it!
+Attached files server.py #!/usr/bin/env python3 import hashlib from random import randbytes def MAC(msg, key): return hashlib.sha256(key + msg).</description>
+    </item>
+    
+  </channel>
+</rss>
