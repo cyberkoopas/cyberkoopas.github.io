@@ -5,7 +5,17 @@
     <link>https://www.cyberkoopas.fr/tags/x-hackday-qualification/</link>
     <description>Recent content in x-hackday-qualification on CyberKoopas</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/x-hackday-qualification/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Mar 2023 01:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/x-hackday-qualification/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trusted 2</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-qualification/trusted2/</link>
+      <pubDate>Mon, 13 Mar 2023 01:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-qualification/trusted2/</guid>
+      <description>Challenge information Summary Following the leak of an important database in the Sagittarius sector, it has been decided to rework the whole security of the information system. Make sure that the authentication portal is this time secured as it should be.
+Attached files server.py #!/usr/bin/env python3 import hashlib from random import randrange from ecdsa import NIST256p, ecdsa G = NIST256p.generator order = G.order() priv = randrange(1, order) pub = G * priv pub = ecdsa.</description>
+    </item>
+    
     <item>
       <title>Trusted</title>
       <link>https://www.cyberkoopas.fr/posts/hackday-qualification/trusted/</link>
