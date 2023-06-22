@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 11 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Principiante</title>
-      <link>https://www.cyberkoopas.fr/posts/dvctf/dvctf-principiante/</link>
+      <title>[DaVinciCTF] Programming - Principiante</title>
+      <link>https://www.cyberkoopas.fr/posts/dvctf/principiante/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.cyberkoopas.fr/posts/dvctf/dvctf-principiante/</guid>
+      <guid>https://www.cyberkoopas.fr/posts/dvctf/principiante/</guid>
       <description>Challenge information Summary You have to give the correct answer 12 times in a row with a 1s timeout between each answer. Base keyboard is :
 _____________________________ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |_| |_| | |_| |_| |_| | | | | | | | | | | | | | | | | | |___|___|___|___|___|___|___| Examples of expected answers :</description>
     </item>

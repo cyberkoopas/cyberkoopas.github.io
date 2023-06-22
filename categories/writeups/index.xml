@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 06 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/categories/writeups/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Netsapp</title>
+      <title>[PwnMe 2600] Web - Netsapp</title>
       <link>https://www.cyberkoopas.fr/posts/pwnme/nestapp/</link>
       <pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate>
       
@@ -16,7 +16,17 @@
     </item>
     
     <item>
-      <title>Trusted 2</title>
+      <title>[Midnight qualif] Crypto - M4g1c</title>
+      <link>https://www.cyberkoopas.fr/posts/midnight/m4g1c/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/midnight/m4g1c/</guid>
+      <description>Challenge information Summary A file has been encrypted and we have access to the encryption algorithm.
+Attached files encrypt.py import sys import os def get_key(length): return os.urandom(length) def encrypt(filename, key): filename_lock = filename + &amp;#34;.lock&amp;#34; data = open(filename, &amp;#34;rb&amp;#34;).read() os.remove(filename) locked = open(filename_lock, &amp;#34;wb&amp;#34;) for idx, i in enumerate(data): locked.write((i ^ key[idx % len(key)]).to_bytes(1, &amp;#34;big&amp;#34;)) if __name__ == &amp;#39;__main__&amp;#39;: if len(sys.argv) != 2: print(f&amp;#34;Usage: {sys.argv[0]} &amp;lt;file to cipher&amp;gt;&amp;#34;) exit(0) else: key = get_key(12) encrypt(sys.</description>
+    </item>
+    
+    <item>
+      <title>[Hackday qualif] Crypto - Trusted 2</title>
       <link>https://www.cyberkoopas.fr/posts/hackday-qualification/trusted2/</link>
       <pubDate>Mon, 13 Mar 2023 01:00:00 +0000</pubDate>
       
@@ -26,7 +36,7 @@ Attached files server.py #!/usr/bin/env python3 import hashlib from random impor
     </item>
     
     <item>
-      <title>Trusted</title>
+      <title>[Hackday qualif] Crypto - Trusted</title>
       <link>https://www.cyberkoopas.fr/posts/hackday-qualification/trusted/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
       
@@ -36,26 +46,26 @@ Attached files server.py #!/usr/bin/env python3 import hashlib from random impor
     </item>
     
     <item>
-      <title>Principiante</title>
-      <link>https://www.cyberkoopas.fr/posts/dvctf/dvctf-principiante/</link>
+      <title>[DaVinciCTF] Crypto - XOR Vigenere</title>
+      <link>https://www.cyberkoopas.fr/posts/dvctf/xor_vigenere/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.cyberkoopas.fr/posts/dvctf/dvctf-principiante/</guid>
-      <description>Challenge information Summary You have to give the correct answer 12 times in a row with a 1s timeout between each answer. Base keyboard is :
-_____________________________ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |_| |_| | |_| |_| |_| | | | | | | | | | | | | | | | | | |___|___|___|___|___|___|___| Examples of expected answers :</description>
-    </item>
-    
-    <item>
-      <title>XOR Vigenere</title>
-      <link>https://www.cyberkoopas.fr/posts/dvctf/dvctf-xor_vigenere/</link>
-      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.cyberkoopas.fr/posts/dvctf/dvctf-xor_vigenere/</guid>
+      <guid>https://www.cyberkoopas.fr/posts/dvctf/xor_vigenere/</guid>
       <description>Challenge information Summary Context : Leonard forgot to tell you the key he used to encrypt his message.
 Would you be able to recover the message he sent you ?
 Flag format: dvCTF{REDACTED} found in the message
 Attached files message 00011010001111010100110001110000001100000101100100100111011100100101000000100100011101010001000000010111001110100101110001110000001100100101110000100010001101010001100100111001001001110001000000100111001001000111101000000100000100100100101101111011011000100110101101100011000100000110111100001000011000010110000000001111011001010000010100011100000110010000101000001001000010110111110100011010000011010111111100000010011001010000001100001101000101100100010001111110011101000110011100100110001111100101010101110000001100000101111100101101001101110001100101110001 Solution Firstly, we can convert the ASCII message file to a binary file (message.bin). It&amp;rsquo;s possible with CyberChef. Select operation From Binary and download file. Cyberchef parameters :
 Delimiter: None Byte Length : 8 We know the flag format is dvCTF{REDACTED}, we can perform a XOR Known plaintext attack.</description>
+    </item>
+    
+    <item>
+      <title>[DaVinciCTF] Programming - Principiante</title>
+      <link>https://www.cyberkoopas.fr/posts/dvctf/principiante/</link>
+      <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/dvctf/principiante/</guid>
+      <description>Challenge information Summary You have to give the correct answer 12 times in a row with a 1s timeout between each answer. Base keyboard is :
+_____________________________ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |_| |_| | |_| |_| |_| | | | | | | | | | | | | | | | | | |___|___|___|___|___|___|___| Examples of expected answers :</description>
     </item>
     
   </channel>

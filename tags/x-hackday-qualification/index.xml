@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 13 Mar 2023 01:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/x-hackday-qualification/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Trusted 2</title>
+      <title>[Hackday qualif] Crypto - Trusted 2</title>
       <link>https://www.cyberkoopas.fr/posts/hackday-qualification/trusted2/</link>
       <pubDate>Mon, 13 Mar 2023 01:00:00 +0000</pubDate>
       
@@ -17,7 +17,7 @@ Attached files server.py #!/usr/bin/env python3 import hashlib from random impor
     </item>
     
     <item>
-      <title>Trusted</title>
+      <title>[Hackday qualif] Crypto - Trusted</title>
       <link>https://www.cyberkoopas.fr/posts/hackday-qualification/trusted/</link>
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
       

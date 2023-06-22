@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>x-Midnight-qualif on CyberKoopas</title>
+    <link>https://www.cyberkoopas.fr/tags/x-midnight-qualif/</link>
+    <description>Recent content in x-Midnight-qualif on CyberKoopas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 16 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/x-midnight-qualif/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Midnight qualif] Crypto - M4g1c</title>
+      <link>https://www.cyberkoopas.fr/posts/midnight/m4g1c/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/midnight/m4g1c/</guid>
+      <description>Challenge information Summary A file has been encrypted and we have access to the encryption algorithm.
+Attached files encrypt.py import sys import os def get_key(length): return os.urandom(length) def encrypt(filename, key): filename_lock = filename + &amp;#34;.lock&amp;#34; data = open(filename, &amp;#34;rb&amp;#34;).read() os.remove(filename) locked = open(filename_lock, &amp;#34;wb&amp;#34;) for idx, i in enumerate(data): locked.write((i ^ key[idx % len(key)]).to_bytes(1, &amp;#34;big&amp;#34;)) if __name__ == &amp;#39;__main__&amp;#39;: if len(sys.argv) != 2: print(f&amp;#34;Usage: {sys.argv[0]} &amp;lt;file to cipher&amp;gt;&amp;#34;) exit(0) else: key = get_key(12) encrypt(sys.</description>
+    </item>
+    
+  </channel>
+</rss>
