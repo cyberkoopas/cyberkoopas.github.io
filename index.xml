@@ -26,6 +26,19 @@ Attached files encrypt.py import sys import os def get_key(length): return os.ur
     </item>
     
     <item>
+      <title>[Midnight qualif] Pwn - BabyPwn</title>
+      <link>https://www.cyberkoopas.fr/posts/midnight/babypwn/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/midnight/babypwn/</guid>
+      <description>Challenge information Summary Exploit the attached binary.
+Attached files babypwn (linux binary) libc.so.6 (Associated libc) Solution First, let&amp;rsquo;s check security informations.
+checksec babypwn # Arch: amd64-64-little # RELRO: Partial RELRO # Stack: No canary found # NX: NX enabled # PIE: PIE enabled Then, run the program to understand what it does.
+./babypwn # There you go, libc leak: 0x7fc01e5f9450 It seems to a classic ret2libc challenge.
+We have to test how many chars we need to overwrite RIP.</description>
+    </item>
+    
+    <item>
       <title>[Hackday qualif] Crypto - Trusted 2</title>
       <link>https://www.cyberkoopas.fr/posts/hackday-qualification/trusted2/</link>
       <pubDate>Mon, 13 Mar 2023 01:00:00 +0000</pubDate>
@@ -66,6 +79,52 @@ Delimiter: None Byte Length : 8 We know the flag format is dvCTF{REDACTED}, we c
       <guid>https://www.cyberkoopas.fr/posts/dvctf/principiante/</guid>
       <description>Challenge information Summary You have to give the correct answer 12 times in a row with a 1s timeout between each answer. Base keyboard is :
 _____________________________ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |_| |_| | |_| |_| |_| | | | | | | | | | | | | | | | | | |___|___|___|___|___|___|___| Examples of expected answers :</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-my-runaway-daughter/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-my-runaway-daughter/</guid>
+      <description>![[Pasted image 20230619135704.png]]
+This SOCMINT Osint challenge start with this post that gave us the Facebook profile of the missing daughter. ![[Pasted image 20230619161123.png]] On her profile nothing except her name and a picture. By googling her name we can find her LinkedIn. ![[Pasted image 20230619161354.png]] One of her LinkedIn post we can find her resume link on a Google Drive. ![[Pasted image 20230512194624.png]] Inspecting the element of the web page of the drive, we can find a crucial information to continue our investigation her email : julie.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-wherewhen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-wherewhen/</guid>
+      <description>**The flag format is : `city_AAAA:MM:dd_HH`** The city is in lowercase and without accent, and the time is approximated to the nearest hour. ![[where when .jpg]] By using Google Lens we found that this pictures are Nime&amp;rsquo;s arena. Using Google maps we can determine where exactly the picture was taken. Now to find when the picture was taken we check the metadata but of course there were deleted. So we use the sun clearly visible.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/</guid>
+      <description>On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it&amp;#39;s a spy-ceship from Ophiuchus, we&amp;#39;ll need to organize an intercept mission as soon as possible.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-qualification/en-a-starry-night-sky/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-qualification/en-a-starry-night-sky/</guid>
+      <description>The large library within the Cancer sector contains many documents of all types and from all periods. Among these documents, some have deteriorated over time to the point of finding only snippets of information. This is for example the case of this image where we guess the words 9:00 p.m. and 2022. Try to find the place and the month of shooting. **Flag format: `HACKDAY{COUNTRY_MONTH}`** In English and in capitals !</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-qualification/en-vroooom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-qualification/en-vroooom/</guid>
+      <description>The MIA (Intergalactic Automobile Museum) has just received a donation of several photo books from an old (probably very old) car collector. Among the documents was a photo of a car, but the curator was unable to determine its origin... He then decides to call on you, will you be able to give the name of the event where this photo was taken? **The flag is to be constructed in the form: `HACKDAY{.</description>
     </item>
     
     

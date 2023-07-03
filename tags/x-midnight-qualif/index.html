@@ -123,6 +123,24 @@ Attached files encrypt.py import sys import os def get_key(length): return os.ur
 </footer>
   <a class="entry-link" aria-label="post link to [Midnight qualif] Crypto - M4g1c" href="https://www.cyberkoopas.fr/posts/midnight/m4g1c/"></a>
 </article>
+
+<article class="post-entry tag-entry"> 
+  <header class="entry-header">
+    <h2>[Midnight qualif] Pwn - BabyPwn
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Challenge information Summary Exploit the attached binary.
+Attached files babypwn (linux binary) libc.so.6 (Associated libc) Solution First, let’s check security informations.
+checksec babypwn # Arch: amd64-64-little # RELRO: Partial RELRO # Stack: No canary found # NX: NX enabled # PIE: PIE enabled Then, run the program to understand what it does.
+./babypwn # There you go, libc leak: 0x7fc01e5f9450 It seems to a classic ret2libc challenge.
+We have to test how many chars we need to overwrite RIP....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-04-16 00:00:00 +0000 UTC'>April 16, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;
+
+</footer>
+  <a class="entry-link" aria-label="post link to [Midnight qualif] Pwn - BabyPwn" href="https://www.cyberkoopas.fr/posts/midnight/babypwn/"></a>
+</article>
     </main>
     
 <footer class="footer">

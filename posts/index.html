@@ -155,6 +155,24 @@ Attached files encrypt.py import sys import os def get_key(length): return os.ur
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>[Midnight qualif] Pwn - BabyPwn
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Challenge information Summary Exploit the attached binary.
+Attached files babypwn (linux binary) libc.so.6 (Associated libc) Solution First, let’s check security informations.
+checksec babypwn # Arch: amd64-64-little # RELRO: Partial RELRO # Stack: No canary found # NX: NX enabled # PIE: PIE enabled Then, run the program to understand what it does.
+./babypwn # There you go, libc leak: 0x7fc01e5f9450 It seems to a classic ret2libc challenge.
+We have to test how many chars we need to overwrite RIP....</p>
+  </div>
+  <footer class="entry-footer"><span title='2023-04-16 00:00:00 +0000 UTC'>April 16, 2023</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;
+
+</footer>
+  <a class="entry-link" aria-label="post link to [Midnight qualif] Pwn - BabyPwn" href="https://www.cyberkoopas.fr/posts/midnight/babypwn/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>[Hackday qualif] Crypto - Trusted 2
     </h2>
   </header>
@@ -215,6 +233,55 @@ _____________________________ | | | | | | | | | | | | | | | | | | | | | | | | | 
 </footer>
   <a class="entry-link" aria-label="post link to [DaVinciCTF] Programming - Principiante" href="https://www.cyberkoopas.fr/posts/dvctf/principiante/"></a>
 </article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>![[Pasted image 20230619135704.png]]
+This SOCMINT Osint challenge start with this post that gave us the Facebook profile of the missing daughter. ![[Pasted image 20230619161123.png]] On her profile nothing except her name and a picture. By googling her name we can find her LinkedIn. ![[Pasted image 20230619161354.png]] One of her LinkedIn post we can find her resume link on a Google Drive. ![[Pasted image 20230512194624.png]] Inspecting the element of the web page of the drive, we can find a crucial information to continue our investigation her email : julie....</p>
+  </div>
+  <footer class="entry-footer">2 min&nbsp;·&nbsp;
+
+</footer>
+  <a class="entry-link" aria-label="post link to " href="https://www.cyberkoopas.fr/posts/hackday-final/osint/en-my-runaway-daughter/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>**The flag format is : `city_AAAA:MM:dd_HH`** The city is in lowercase and without accent, and the time is approximated to the nearest hour. ![[where when .jpg]] By using Google Lens we found that this pictures are Nime’s arena. Using Google maps we can determine where exactly the picture was taken. Now to find when the picture was taken we check the metadata but of course there were deleted. So we use the sun clearly visible....</p>
+  </div>
+  <footer class="entry-footer">1 min&nbsp;·&nbsp;
+
+</footer>
+  <a class="entry-link" aria-label="post link to " href="https://www.cyberkoopas.fr/posts/hackday-final/osint/en-wherewhen/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it&#39;s a spy-ceship from Ophiuchus, we&#39;ll need to organize an intercept mission as soon as possible....</p>
+  </div>
+  <footer class="entry-footer">1 min&nbsp;·&nbsp;
+
+</footer>
+  <a class="entry-link" aria-label="post link to " href="https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="https://www.cyberkoopas.fr/posts/page/2/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
     </main>
     
 <footer class="footer">

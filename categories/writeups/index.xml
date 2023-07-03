@@ -26,6 +26,19 @@ Attached files encrypt.py import sys import os def get_key(length): return os.ur
     </item>
     
     <item>
+      <title>[Midnight qualif] Pwn - BabyPwn</title>
+      <link>https://www.cyberkoopas.fr/posts/midnight/babypwn/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/midnight/babypwn/</guid>
+      <description>Challenge information Summary Exploit the attached binary.
+Attached files babypwn (linux binary) libc.so.6 (Associated libc) Solution First, let&amp;rsquo;s check security informations.
+checksec babypwn # Arch: amd64-64-little # RELRO: Partial RELRO # Stack: No canary found # NX: NX enabled # PIE: PIE enabled Then, run the program to understand what it does.
+./babypwn # There you go, libc leak: 0x7fc01e5f9450 It seems to a classic ret2libc challenge.
+We have to test how many chars we need to overwrite RIP.</description>
+    </item>
+    
+    <item>
       <title>[Hackday qualif] Crypto - Trusted 2</title>
       <link>https://www.cyberkoopas.fr/posts/hackday-qualification/trusted2/</link>
       <pubDate>Mon, 13 Mar 2023 01:00:00 +0000</pubDate>
