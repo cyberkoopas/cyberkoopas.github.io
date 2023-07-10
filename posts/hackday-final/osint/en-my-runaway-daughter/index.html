@@ -173,59 +173,59 @@
 
 </div>
   </header> 
-  <div class="post-content"><p><img loading="lazy" src="CTFs/Hackday-final/Osint/11.png" alt="11.png"  />
+  <div class="post-content"><p><img loading="lazy" src="/CTFs/Hackday-final/Osint/11.png" alt="11.png"  />
 </p>
 <p>This SOCMINT Osint challenge start with this post that gave us the <strong>Facebook</strong> profile of the missing daughter.
-<img loading="lazy" src="CTFs/Hackday-final/Osint/12.png" alt="12.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Osint/12.png" alt="12.png"  />
 
 On her profile nothing except her name and a picture. By googling her name we can find her LinkedIn.
-<img loading="lazy" src="CTFs/Hackday-final/Osint/3.png" alt="3.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Osint/3.png" alt="3.png"  />
 
 One of her LinkedIn post we can find her resume link on a Google Drive.
-<img loading="lazy" src="CTFs/Hackday-final/Osint/4.png" alt="4.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Osint/4.png" alt="4.png"  />
 
 Inspecting the element of the web page of the drive, we can find a crucial information to continue our investigation her email : <strong><code>julie.rufuberos07@gmail.com</code></strong>
 Using Epios.com on it, we can find all the public activity on this google account :
-<img loading="lazy" src="CTFs/Hackday-final/Osint/5.png" alt="5.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Osint/5.png" alt="5.png"  />
 
-We can find one of her review maps : <img loading="lazy" src="CTFs/Hackday-final/Osint/6.png" alt="6.png"  />
+We can find one of her review maps : <img loading="lazy" src="/CTFs/Hackday-final/Osint/6.png" alt="6.png"  />
 
 We get our first flag by decoding the Base64 _<em><strong><code>HACKDAY{Clermont-Ferrand}</code></strong></em>
 Link to the maps review we have 2 pictures :
-<img loading="lazy" src="CTFs/Hackday-final/Osint/7.png" alt="7.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Osint/7.png" alt="7.png"  />
 
 In the text we learn that the postal card with the glass was taken in the first city she
 runaway by. So let&rsquo;s reverse it :
-<img loading="lazy" src="CTFs/Hackday-final/Osint/8.png" alt="8.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Osint/8.png" alt="8.png"  />
 
 We get our second flag _<em><strong><code>HACKDAY{Vichy}</code></strong></em>
 Let&rsquo;s continue our investigation we know for sure that she is a gamer and a developer, so she must have a Github profile. Let&rsquo;s dork on it with her email adress.
-<img loading="lazy" src="CTFs/Hackday-final/Osint/9.png" alt="9.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Osint/9.png" alt="9.png"  />
 
 Bingo we find her profile, it&rsquo;s confirm by the same Profile picture as the first google account.
-On it we can find a diary, where she wrote : <img loading="lazy" src="CTFs/Hackday-final/Osint/10.png" alt="10.png"  />
+On it we can find a diary, where she wrote : <img loading="lazy" src="/CTFs/Hackday-final/Osint/10.png" alt="10.png"  />
 
 That she visit her <em>&ldquo;favorite video game publisher&rdquo;</em>. On her LinkedIn she liked a lot of Ubisoft post.
-By looking on maps the review of Ubisoft Montpellier we can find another post from her using a different google account : <img loading="lazy" src="CTFs/Hackday-final/Osint/111.png" alt="111.png"  />
+By looking on maps the review of Ubisoft Montpellier we can find another post from her using a different google account : <img loading="lazy" src="/CTFs/Hackday-final/Osint/111.png" alt="111.png"  />
 
 We get our third flag _<em><strong><code>HACKDAY{Montpellier}</code></strong></em>
-By looking other review on this account we can find this one : <img loading="lazy" src="CTFs/Hackday-final/Osint/112.png" alt="112.png"  />
+By looking other review on this account we can find this one : <img loading="lazy" src="/CTFs/Hackday-final/Osint/112.png" alt="112.png"  />
 
 We learn that she has a Twitter account where she post while she was on her runway at the first freeway.
 We found the freeway mention and make the twitter dork following :
 <code>since:2023-02-01 geocode:42.418000472416594,2.8726282481503556,2km</code>
 Who get us her twitter account :
-<img loading="lazy" src="CTFs/Hackday-final/Osint/13.png" alt="13.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Osint/13.png" alt="13.png"  />
 
 We get our fourth flag _<em><strong><code>HACKDAY{Jonquera}</code></strong></em>
 She also tweet about a blog she made :
-<img loading="lazy" src="CTFs/Hackday-final/Osint/14.png" alt="14.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Osint/14.png" alt="14.png"  />
 
 Let&rsquo;s use whatsmyname.app to find where this nickname/pseudo is used :
-<img loading="lazy" src="CTFs/Hackday-final/Osint/15.png" alt="15.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Osint/15.png" alt="15.png"  />
 
 tumblr match the description used in her tweet and indeed we find a post about her new life in Spain :
-<img loading="lazy" src="CTFs/Hackday-final/Osint/16.png" alt="16.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Osint/16.png" alt="16.png"  />
 
 We get our fifth flag _<em><strong><code>HACKDAY{Barcelona}</code></strong></em></p>
 

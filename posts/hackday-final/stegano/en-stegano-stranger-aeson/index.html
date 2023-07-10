@@ -182,16 +182,16 @@ Can you get back the original image so we can identify the ship ?
 If it&#39;s a spy-ceship from Ophiuchus, we&#39;ll need to organize an intercept mission as soon as possible.
 
 **The flag format is : `HACKDAY{xxXXxxXXxx}`**
-</code></pre><p><img loading="lazy" src="CTFs/Hackday-final/Stegano/1.png" alt="1.png"  />
+</code></pre><p><img loading="lazy" src="/CTFs/Hackday-final/Stegano/1.png" alt="1.png"  />
 </p>
 <p>Opening the PNG file with an inspector such as <strong>TweakPNG</strong> shows 1 IHDR, 1 eXIf, 5 IDAT and 1 IEND chunks. They all seem to be well-formed. That being said, all IDAT chunks have the same length except for the second one. While technically the IDAT chunks can be of any length, the shorter one is usually the last.
-<img loading="lazy" src="CTFs/Hackday-final/Stegano/2.png" alt="2.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Stegano/2.png" alt="2.png"  />
 
 We try few possibilities and bingo we got :
-<img loading="lazy" src="CTFs/Hackday-final/Stegano/3.png" alt="3.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Stegano/3.png" alt="3.png"  />
 
 Nothing visible on the image so let&rsquo;s check for something with <strong>zsteg</strong> :
-<img loading="lazy" src="CTFs/Hackday-final/Stegano/4.png" alt="4.png"  />
+<img loading="lazy" src="/CTFs/Hackday-final/Stegano/4.png" alt="4.png"  />
 
 Flag : <strong><code>HACKDAY{B3Tw33n_Ch4RyBd15_4nD_5Cy11A!}</code></strong></p>
 
