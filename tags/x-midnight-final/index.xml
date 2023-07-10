@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>x-Midnight-final on CyberKoopas</title>
+    <link>https://www.cyberkoopas.fr/tags/x-midnight-final/</link>
+    <description>Recent content in x-Midnight-final on CyberKoopas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 25 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/x-midnight-final/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Midnight final] Osint - Esnarcotrafiquants</title>
+      <link>https://www.cyberkoopas.fr/posts/midnight/en-mctf-osint-final/</link>
+      <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/midnight/en-mctf-osint-final/</guid>
+      <description>1/5 One of our pilots has been missing for 5 days, our investigation has had no results, but we still have a lead. We know he has a son, and it&amp;#39;s possible that he can tell us more about his father. He&amp;#39;s apparently very active on a social network - his name should be idrisrsbel7. Format : MCTF{} To begin this investigation we have an username : idrisrsbel7 Our first objectives is to find Idris Father&amp;rsquo;s .</description>
+    </item>
+    
+  </channel>
+</rss>

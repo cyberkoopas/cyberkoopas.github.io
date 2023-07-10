@@ -17,6 +17,15 @@ Attached files encrypt.py import sys import os def get_key(length): return os.ur
     </item>
     
     <item>
+      <title>[Midnight qualif] Osint - Time Traveler</title>
+      <link>https://www.cyberkoopas.fr/posts/midnight/en-osint-qualif/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/midnight/en-osint-qualif/</guid>
+      <description>1/3 It is said that a time traveler is roaming the social networks right now... his username? &amp;#34;ibm_5100_&amp;#34; Find out more about this person. Let&amp;rsquo;s dig this username using WhatsMyName : ![[/CTFs/Midnight-qualif/Osint/1.png]] It&amp;rsquo;s fit the description about a time traveler. But nothing more&amp;hellip; ![[/CTFs/Midnight-qualif/Osint/2.png]] Since we know it&amp;rsquo;s linked to time travel, let&amp;rsquo;s use WaybackMachine to dig the past of this twitter account : ![[/CTFs/Midnight-qualif/Osint/3.png]] we found one archive with on it the first flag : !</description>
+    </item>
+    
+    <item>
       <title>[Midnight qualif] Pwn - BabyPwn</title>
       <link>https://www.cyberkoopas.fr/posts/midnight/babypwn/</link>
       <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>

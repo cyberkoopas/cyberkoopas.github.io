@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>CyberKoopas</title>
-<meta name="keywords" content="">
+<title>[Hackday final] Stegano - strange aeons | CyberKoopas</title>
+<meta name="keywords" content="x-hackday-final, stegano">
 <meta name="description" content="On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it&#39;s a spy-ceship from Ophiuchus, we&#39;ll need to organize an intercept mission as soon as possible.">
 <meta name="author" content="
 
@@ -30,15 +30,15 @@
         }
 
     </style>
-</noscript><meta property="og:title" content="" />
+</noscript><meta property="og:title" content="[Hackday final] Stegano - strange aeons" />
 <meta property="og:description" content="On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it&#39;s a spy-ceship from Ophiuchus, we&#39;ll need to organize an intercept mission as soon as possible." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/" /><meta property="article:section" content="posts" />
-
-
+<meta property="article:published_time" content="2023-05-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-05-13T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
+<meta name="twitter:title" content="[Hackday final] Stegano - strange aeons"/>
 <meta name="twitter:description" content="On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it&#39;s a spy-ceship from Ophiuchus, we&#39;ll need to organize an intercept mission as soon as possible."/>
 
 
@@ -56,7 +56,7 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "",
+      "name": "[Hackday final] Stegano - strange aeons",
       "item": "https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/"
     }
   ]
@@ -66,17 +66,17 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "",
-  "name": "",
+  "headline": "[Hackday final] Stegano - strange aeons",
+  "name": "[Hackday final] Stegano - strange aeons",
   "description": "On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it\u0026#39;s a spy-ceship from Ophiuchus, we\u0026#39;ll need to organize an intercept mission as soon as possible.",
   "keywords": [
-    
+    "x-hackday-final", "stegano"
   ],
-  "articleBody": "On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it's a spy-ceship from Ophiuchus, we'll need to organize an intercept mission as soon as possible. **The flag format is : `HACKDAY{xxXXxxXXxx}`** ![[strange-aeons.png]]\nOpening the PNG file with an inspector such as TweakPNG shows 1 IHDR, 1 eXIf, 5 IDAT and 1 IEND chunks. They all seem to be well-formed. That being said, all IDAT chunks have the same length except for the second one. While technically the IDAT chunks can be of any length, the shorter one is usually the last. ![[SteganoStrange AEONS.png]] We try few possibilities and bingo we got : ![[strange-aeons2.png]] Nothing visible on the image so let’s check for something with zsteg : ![[Pasted image 20230513091929.png]] Flag : HACKDAY{B3Tw33n_Ch4RyBd15_4nD_5Cy11A!}\n",
+  "articleBody": "On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it's a spy-ceship from Ophiuchus, we'll need to organize an intercept mission as soon as possible. **The flag format is : `HACKDAY{xxXXxxXXxx}`** ![[CTFs/Hackday-final/Stegano/strange-aeons.png]]\nOpening the PNG file with an inspector such as TweakPNG shows 1 IHDR, 1 eXIf, 5 IDAT and 1 IEND chunks. They all seem to be well-formed. That being said, all IDAT chunks have the same length except for the second one. While technically the IDAT chunks can be of any length, the shorter one is usually the last. ![[CTFs/Hackday-final/Stegano/SteganoStrange AEONS.png]] We try few possibilities and bingo we got : ![[CTFs/Hackday-final/Stegano/strange-aeons2.png]] Nothing visible on the image so let’s check for something with zsteg : ![[CTFs/Hackday-final/Stegano/Pasted image 20230513091929.png]] Flag : HACKDAY{B3Tw33n_Ch4RyBd15_4nD_5Cy11A!}\n",
   "wordCount" : "183",
   "inLanguage": "en",
-  "datePublished": "0001-01-01T00:00:00Z",
-  "dateModified": "0001-01-01T00:00:00Z",
+  "datePublished": "2023-05-13T00:00:00Z",
+  "dateModified": "2023-05-13T00:00:00Z",
   "author":{
     "@type": "Person",
     "name": "CyberKoopas"
@@ -165,9 +165,9 @@
   <header class="post-header">
     
     <h1 class="post-title">
-      
+      [Hackday final] Stegano - strange aeons
     </h1>
-    <div class="post-meta">1 min&nbsp;·&nbsp;
+    <div class="post-meta"><span title='2023-05-13 00:00:00 +0000 UTC'>May 13, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;
 
 
 
@@ -180,13 +180,13 @@ The crew sent us the photo it took but the proximity of the blackhole seems to h
 Can you get back the original image so we can identify the ship ? If it&#39;s a spy-ceship from Ophiuchus, we&#39;ll need to organize an intercept mission as soon as possible.
 
 **The flag format is : `HACKDAY{xxXXxxXXxx}`**
-</code></pre><p>![[strange-aeons.png]]</p>
+</code></pre><p>![[CTFs/Hackday-final/Stegano/strange-aeons.png]]</p>
 <p>Opening the PNG file with an inspector such as <strong>TweakPNG</strong> shows 1 IHDR, 1 eXIf, 5 IDAT and 1 IEND chunks. They all seem to be well-formed. That being said, all IDAT chunks have the same length except for the second one. While technically the IDAT chunks can be of any length, the shorter one is usually the last.
-![[SteganoStrange AEONS.png]]
+![[CTFs/Hackday-final/Stegano/SteganoStrange AEONS.png]]
 We try few possibilities and bingo we got :
-![[strange-aeons2.png]]
+![[CTFs/Hackday-final/Stegano/strange-aeons2.png]]
 Nothing visible on the image so let&rsquo;s check for something with <strong>zsteg</strong> :
-![[Pasted image 20230513091929.png]]
+![[CTFs/Hackday-final/Stegano/Pasted image 20230513091929.png]]
 Flag : <strong><code>HACKDAY{B3Tw33n_Ch4RyBd15_4nD_5Cy11A!}</code></strong></p>
 
 
@@ -194,6 +194,8 @@ Flag : <strong><code>HACKDAY{B3Tw33n_Ch4RyBd15_4nD_5Cy11A!}</code></strong></p>
 
   <footer class="post-footer">
     <ul class="post-tags">
+      <li><a href="https://www.cyberkoopas.fr/tags/x-hackday-final/">x-hackday-final</a></li>
+      <li><a href="https://www.cyberkoopas.fr/tags/stegano/">stegano</a></li>
     </ul>
   </footer>
 </article>

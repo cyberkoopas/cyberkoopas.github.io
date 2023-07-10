@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>forensic on CyberKoopas</title>
+    <link>https://www.cyberkoopas.fr/tags/forensic/</link>
+    <description>Recent content in forensic on CyberKoopas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 06 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/forensic/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[PwnMe 2600] Forensic - Silver</title>
+      <link>https://www.cyberkoopas.fr/posts/pwnme/silver/</link>
+      <pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/pwnme/silver/</guid>
+      <description>Hey, I received a flash drive in my mailbox. It appears that the person who sent me the package was aware that I was using Linux. However, the flash drive self-destructed before I was able to make an image of it. To get the flag, you have to go to the showcase site of the c2 in question. This is real malware, so be careful when running it, use a vm for malware analysis Let&amp;rsquo;s import this image in Autopsy (Forensic Software), it find 3 interesting files : * 1 script .</description>
+    </item>
+    
+  </channel>
+</rss>

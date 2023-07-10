@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SOCMINT on CyberKoopas</title>
+    <link>https://www.cyberkoopas.fr/tags/socmint/</link>
+    <description>Recent content in SOCMINT on CyberKoopas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 25 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/socmint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Midnight final] Osint - Esnarcotrafiquants</title>
+      <link>https://www.cyberkoopas.fr/posts/midnight/en-mctf-osint-final/</link>
+      <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/midnight/en-mctf-osint-final/</guid>
+      <description>1/5 One of our pilots has been missing for 5 days, our investigation has had no results, but we still have a lead. We know he has a son, and it&amp;#39;s possible that he can tell us more about his father. He&amp;#39;s apparently very active on a social network - his name should be idrisrsbel7. Format : MCTF{} To begin this investigation we have an username : idrisrsbel7 Our first objectives is to find Idris Father&amp;rsquo;s .</description>
+    </item>
+    
+    <item>
+      <title>[Hackday final] Osint - My runaway daughter</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-my-runaway-daughter/</link>
+      <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-my-runaway-daughter/</guid>
+      <description>![[CTFs/Hackday-final/Osint/Pasted image 20230619135704.png]]
+This SOCMINT Osint challenge start with this post that gave us the Facebook profile of the missing daughter. ![[CTFs/Hackday-final/Osint/Pasted image 20230619161123.png]] On her profile nothing except her name and a picture. By googling her name we can find her LinkedIn. ![[CTFs/Hackday-final/Osint/Pasted image 20230619161354.png]] One of her LinkedIn post we can find her resume link on a Google Drive. ![[CTFs/Hackday-final/Osint/Pasted image 20230512194624.png]] Inspecting the element of the web page of the drive, we can find a crucial information to continue our investigation her email : julie.</description>
+    </item>
+    
+    <item>
+      <title>[Midnight qualif] Osint - Time Traveler</title>
+      <link>https://www.cyberkoopas.fr/posts/midnight/en-osint-qualif/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/midnight/en-osint-qualif/</guid>
+      <description>1/3 It is said that a time traveler is roaming the social networks right now... his username? &amp;#34;ibm_5100_&amp;#34; Find out more about this person. Let&amp;rsquo;s dig this username using WhatsMyName : ![[/CTFs/Midnight-qualif/Osint/1.png]] It&amp;rsquo;s fit the description about a time traveler. But nothing more&amp;hellip; ![[/CTFs/Midnight-qualif/Osint/2.png]] Since we know it&amp;rsquo;s linked to time travel, let&amp;rsquo;s use WaybackMachine to dig the past of this twitter account : ![[/CTFs/Midnight-qualif/Osint/3.png]] we found one archive with on it the first flag : !</description>
+    </item>
+    
+  </channel>
+</rss>

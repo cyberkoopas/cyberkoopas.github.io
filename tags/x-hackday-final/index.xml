@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>x-hackday-final on CyberKoopas</title>
+    <link>https://www.cyberkoopas.fr/tags/x-hackday-final/</link>
+    <description>Recent content in x-hackday-final on CyberKoopas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 13 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/x-hackday-final/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Hackday final] Osint - My runaway daughter</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-my-runaway-daughter/</link>
+      <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-my-runaway-daughter/</guid>
+      <description>![[CTFs/Hackday-final/Osint/Pasted image 20230619135704.png]]
+This SOCMINT Osint challenge start with this post that gave us the Facebook profile of the missing daughter. ![[CTFs/Hackday-final/Osint/Pasted image 20230619161123.png]] On her profile nothing except her name and a picture. By googling her name we can find her LinkedIn. ![[CTFs/Hackday-final/Osint/Pasted image 20230619161354.png]] One of her LinkedIn post we can find her resume link on a Google Drive. ![[CTFs/Hackday-final/Osint/Pasted image 20230512194624.png]] Inspecting the element of the web page of the drive, we can find a crucial information to continue our investigation her email : julie.</description>
+    </item>
+    
+    <item>
+      <title>[Hackday final] Osint - Where &amp; When</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-wherewhen/</link>
+      <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-wherewhen/</guid>
+      <description>**The flag format is : `city_AAAA:MM:dd_HH`** The city is in lowercase and without accent, and the time is approximated to the nearest hour. ![CTFs/Hackday-final/Osint/[where when .jpg]] By using Google Lens we found that this pictures are Nime&amp;rsquo;s arena. Using Google maps we can determine where exactly the picture was taken. Now to find when the picture was taken we check the metadata but of course there were deleted. So we use the sun clearly visible.</description>
+    </item>
+    
+    <item>
+      <title>[Hackday final] Stegano - strange aeons</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/</link>
+      <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/</guid>
+      <description>On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it&amp;#39;s a spy-ceship from Ophiuchus, we&amp;#39;ll need to organize an intercept mission as soon as possible.</description>
+    </item>
+    
+  </channel>
+</rss>

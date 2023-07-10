@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>stegano on CyberKoopas</title>
+    <link>https://www.cyberkoopas.fr/tags/stegano/</link>
+    <description>Recent content in stegano on CyberKoopas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 13 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/stegano/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Hackday final] Stegano - strange aeons</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/</link>
+      <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/</guid>
+      <description>On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it&amp;#39;s a spy-ceship from Ophiuchus, we&amp;#39;ll need to organize an intercept mission as soon as possible.</description>
+    </item>
+    
+  </channel>
+</rss>

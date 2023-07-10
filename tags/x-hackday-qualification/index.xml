@@ -26,5 +26,23 @@ Attached files server.py #!/usr/bin/env python3 import hashlib from random impor
 Attached files server.py #!/usr/bin/env python3 import hashlib from random import randbytes def MAC(msg, key): return hashlib.sha256(key + msg).</description>
     </item>
     
+    <item>
+      <title>[Hackday qualif] Osint - A starry night sky</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-qualification/en-a-starry-night-sky/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-qualification/en-a-starry-night-sky/</guid>
+      <description>The large library within the Cancer sector contains many documents of all types and from all periods. Among these documents, some have deteriorated over time to the point of finding only snippets of information. This is for example the case of this image where we guess the words 9:00 p.m. and 2022. Try to find the place and the month of shooting. **Flag format: `HACKDAY{COUNTRY_MONTH}`** In English and in capitals !</description>
+    </item>
+    
+    <item>
+      <title>[Hackday qualif] Osint - Vroooom</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-qualification/en-vroooom/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-qualification/en-vroooom/</guid>
+      <description>The MIA (Intergalactic Automobile Museum) has just received a donation of several photo books from an old (probably very old) car collector. Among the documents was a photo of a car, but the curator was unable to determine its origin... He then decides to call on you, will you be able to give the name of the event where this photo was taken? **The flag is to be constructed in the form: `HACKDAY{.</description>
+    </item>
+    
   </channel>
 </rss>

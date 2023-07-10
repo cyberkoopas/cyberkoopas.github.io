@@ -5,7 +5,53 @@
     <link>https://www.cyberkoopas.fr/posts/</link>
     <description>Recent content in Posts on CyberKoopas</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 06 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Midnight final] Osint - Esnarcotrafiquants</title>
+      <link>https://www.cyberkoopas.fr/posts/midnight/en-mctf-osint-final/</link>
+      <pubDate>Sun, 25 Jun 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/midnight/en-mctf-osint-final/</guid>
+      <description>1/5 One of our pilots has been missing for 5 days, our investigation has had no results, but we still have a lead. We know he has a son, and it&amp;#39;s possible that he can tell us more about his father. He&amp;#39;s apparently very active on a social network - his name should be idrisrsbel7. Format : MCTF{} To begin this investigation we have an username : idrisrsbel7 Our first objectives is to find Idris Father&amp;rsquo;s .</description>
+    </item>
+    
+    <item>
+      <title>[Hackday final] Osint - My runaway daughter</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-my-runaway-daughter/</link>
+      <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-my-runaway-daughter/</guid>
+      <description>![[CTFs/Hackday-final/Osint/Pasted image 20230619135704.png]]
+This SOCMINT Osint challenge start with this post that gave us the Facebook profile of the missing daughter. ![[CTFs/Hackday-final/Osint/Pasted image 20230619161123.png]] On her profile nothing except her name and a picture. By googling her name we can find her LinkedIn. ![[CTFs/Hackday-final/Osint/Pasted image 20230619161354.png]] One of her LinkedIn post we can find her resume link on a Google Drive. ![[CTFs/Hackday-final/Osint/Pasted image 20230512194624.png]] Inspecting the element of the web page of the drive, we can find a crucial information to continue our investigation her email : julie.</description>
+    </item>
+    
+    <item>
+      <title>[Hackday final] Osint - Where &amp; When</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-wherewhen/</link>
+      <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-wherewhen/</guid>
+      <description>**The flag format is : `city_AAAA:MM:dd_HH`** The city is in lowercase and without accent, and the time is approximated to the nearest hour. ![CTFs/Hackday-final/Osint/[where when .jpg]] By using Google Lens we found that this pictures are Nime&amp;rsquo;s arena. Using Google maps we can determine where exactly the picture was taken. Now to find when the picture was taken we check the metadata but of course there were deleted. So we use the sun clearly visible.</description>
+    </item>
+    
+    <item>
+      <title>[Hackday final] Stegano - strange aeons</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/</link>
+      <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/</guid>
+      <description>On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it&amp;#39;s a spy-ceship from Ophiuchus, we&amp;#39;ll need to organize an intercept mission as soon as possible.</description>
+    </item>
+    
+    <item>
+      <title>[PwnMe 2600] Forensic - Silver</title>
+      <link>https://www.cyberkoopas.fr/posts/pwnme/silver/</link>
+      <pubDate>Sat, 06 May 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/pwnme/silver/</guid>
+      <description>Hey, I received a flash drive in my mailbox. It appears that the person who sent me the package was aware that I was using Linux. However, the flash drive self-destructed before I was able to make an image of it. To get the flag, you have to go to the showcase site of the c2 in question. This is real malware, so be careful when running it, use a vm for malware analysis Let&amp;rsquo;s import this image in Autopsy (Forensic Software), it find 3 interesting files : * 1 script .</description>
+    </item>
+    
     <item>
       <title>[PwnMe 2600] Web - Netsapp</title>
       <link>https://www.cyberkoopas.fr/posts/pwnme/nestapp/</link>
@@ -23,6 +69,15 @@
       <guid>https://www.cyberkoopas.fr/posts/midnight/m4g1c/</guid>
       <description>Challenge information Summary A file has been encrypted and we have access to the encryption algorithm.
 Attached files encrypt.py import sys import os def get_key(length): return os.urandom(length) def encrypt(filename, key): filename_lock = filename + &amp;#34;.lock&amp;#34; data = open(filename, &amp;#34;rb&amp;#34;).read() os.remove(filename) locked = open(filename_lock, &amp;#34;wb&amp;#34;) for idx, i in enumerate(data): locked.write((i ^ key[idx % len(key)]).to_bytes(1, &amp;#34;big&amp;#34;)) if __name__ == &amp;#39;__main__&amp;#39;: if len(sys.argv) != 2: print(f&amp;#34;Usage: {sys.argv[0]} &amp;lt;file to cipher&amp;gt;&amp;#34;) exit(0) else: key = get_key(12) encrypt(sys.</description>
+    </item>
+    
+    <item>
+      <title>[Midnight qualif] Osint - Time Traveler</title>
+      <link>https://www.cyberkoopas.fr/posts/midnight/en-osint-qualif/</link>
+      <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/midnight/en-osint-qualif/</guid>
+      <description>1/3 It is said that a time traveler is roaming the social networks right now... his username? &amp;#34;ibm_5100_&amp;#34; Find out more about this person. Let&amp;rsquo;s dig this username using WhatsMyName : ![[/CTFs/Midnight-qualif/Osint/1.png]] It&amp;rsquo;s fit the description about a time traveler. But nothing more&amp;hellip; ![[/CTFs/Midnight-qualif/Osint/2.png]] Since we know it&amp;rsquo;s linked to time travel, let&amp;rsquo;s use WaybackMachine to dig the past of this twitter account : ![[/CTFs/Midnight-qualif/Osint/3.png]] we found one archive with on it the first flag : !</description>
     </item>
     
     <item>
@@ -59,6 +114,24 @@ Attached files server.py #!/usr/bin/env python3 import hashlib from random impor
     </item>
     
     <item>
+      <title>[Hackday qualif] Osint - A starry night sky</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-qualification/en-a-starry-night-sky/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-qualification/en-a-starry-night-sky/</guid>
+      <description>The large library within the Cancer sector contains many documents of all types and from all periods. Among these documents, some have deteriorated over time to the point of finding only snippets of information. This is for example the case of this image where we guess the words 9:00 p.m. and 2022. Try to find the place and the month of shooting. **Flag format: `HACKDAY{COUNTRY_MONTH}`** In English and in capitals !</description>
+    </item>
+    
+    <item>
+      <title>[Hackday qualif] Osint - Vroooom</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-qualification/en-vroooom/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-qualification/en-vroooom/</guid>
+      <description>The MIA (Intergalactic Automobile Museum) has just received a donation of several photo books from an old (probably very old) car collector. Among the documents was a photo of a car, but the curator was unable to determine its origin... He then decides to call on you, will you be able to give the name of the event where this photo was taken? **The flag is to be constructed in the form: `HACKDAY{.</description>
+    </item>
+    
+    <item>
       <title>[DaVinciCTF] Crypto - XOR Vigenere</title>
       <link>https://www.cyberkoopas.fr/posts/dvctf/xor_vigenere/</link>
       <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
@@ -79,52 +152,6 @@ Delimiter: None Byte Length : 8 We know the flag format is dvCTF{REDACTED}, we c
       <guid>https://www.cyberkoopas.fr/posts/dvctf/principiante/</guid>
       <description>Challenge information Summary You have to give the correct answer 12 times in a row with a 1s timeout between each answer. Base keyboard is :
 _____________________________ | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |_| |_| | |_| |_| |_| | | | | | | | | | | | | | | | | | |___|___|___|___|___|___|___| Examples of expected answers :</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-my-runaway-daughter/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-my-runaway-daughter/</guid>
-      <description>![[Pasted image 20230619135704.png]]
-This SOCMINT Osint challenge start with this post that gave us the Facebook profile of the missing daughter. ![[Pasted image 20230619161123.png]] On her profile nothing except her name and a picture. By googling her name we can find her LinkedIn. ![[Pasted image 20230619161354.png]] One of her LinkedIn post we can find her resume link on a Google Drive. ![[Pasted image 20230512194624.png]] Inspecting the element of the web page of the drive, we can find a crucial information to continue our investigation her email : julie.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-wherewhen/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-wherewhen/</guid>
-      <description>**The flag format is : `city_AAAA:MM:dd_HH`** The city is in lowercase and without accent, and the time is approximated to the nearest hour. ![[where when .jpg]] By using Google Lens we found that this pictures are Nime&amp;rsquo;s arena. Using Google maps we can determine where exactly the picture was taken. Now to find when the picture was taken we check the metadata but of course there were deleted. So we use the sun clearly visible.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.cyberkoopas.fr/posts/hackday-final/stegano/en-stegano-stranger-aeson/</guid>
-      <description>On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it&amp;#39;s a spy-ceship from Ophiuchus, we&amp;#39;ll need to organize an intercept mission as soon as possible.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.cyberkoopas.fr/posts/hackday-qualification/en-a-starry-night-sky/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.cyberkoopas.fr/posts/hackday-qualification/en-a-starry-night-sky/</guid>
-      <description>The large library within the Cancer sector contains many documents of all types and from all periods. Among these documents, some have deteriorated over time to the point of finding only snippets of information. This is for example the case of this image where we guess the words 9:00 p.m. and 2022. Try to find the place and the month of shooting. **Flag format: `HACKDAY{COUNTRY_MONTH}`** In English and in capitals !</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://www.cyberkoopas.fr/posts/hackday-qualification/en-vroooom/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.cyberkoopas.fr/posts/hackday-qualification/en-vroooom/</guid>
-      <description>The MIA (Intergalactic Automobile Museum) has just received a donation of several photo books from an old (probably very old) car collector. Among the documents was a photo of a car, but the curator was unable to determine its origin... He then decides to call on you, will you be able to give the name of the event where this photo was taken? **The flag is to be constructed in the form: `HACKDAY{.</description>
     </item>
     
   </channel>

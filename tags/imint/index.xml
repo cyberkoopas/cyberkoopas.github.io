@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>IMINT on CyberKoopas</title>
+    <link>https://www.cyberkoopas.fr/tags/imint/</link>
+    <description>Recent content in IMINT on CyberKoopas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.cyberkoopas.fr/tags/imint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[Hackday qualif] Osint - A starry night sky</title>
+      <link>https://www.cyberkoopas.fr/posts/hackday-qualification/en-a-starry-night-sky/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.cyberkoopas.fr/posts/hackday-qualification/en-a-starry-night-sky/</guid>
+      <description>The large library within the Cancer sector contains many documents of all types and from all periods. Among these documents, some have deteriorated over time to the point of finding only snippets of information. This is for example the case of this image where we guess the words 9:00 p.m. and 2022. Try to find the place and the month of shooting. **Flag format: `HACKDAY{COUNTRY_MONTH}`** In English and in capitals !</description>
+    </item>
+    
+  </channel>
+</rss>
