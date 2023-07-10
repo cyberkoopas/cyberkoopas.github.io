@@ -21,8 +21,7 @@
       <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-my-runaway-daughter/</guid>
-      <description>![[CTFs/Hackday-final/Osint/Pasted image 20230619135704.png]]
-This SOCMINT Osint challenge start with this post that gave us the Facebook profile of the missing daughter. ![[CTFs/Hackday-final/Osint/Pasted image 20230619161123.png]] On her profile nothing except her name and a picture. By googling her name we can find her LinkedIn. ![[CTFs/Hackday-final/Osint/Pasted image 20230619161354.png]] One of her LinkedIn post we can find her resume link on a Google Drive. ![[CTFs/Hackday-final/Osint/Pasted image 20230512194624.png]] Inspecting the element of the web page of the drive, we can find a crucial information to continue our investigation her email : julie.</description>
+      <description>This SOCMINT Osint challenge start with this post that gave us the Facebook profile of the missing daughter. On her profile nothing except her name and a picture. By googling her name we can find her LinkedIn. One of her LinkedIn post we can find her resume link on a Google Drive. Inspecting the element of the web page of the drive, we can find a crucial information to continue our investigation her email : julie.</description>
     </item>
     
     <item>
@@ -31,7 +30,7 @@ This SOCMINT Osint challenge start with this post that gave us the Facebook prof
       <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-wherewhen/</guid>
-      <description>**The flag format is : `city_AAAA:MM:dd_HH`** The city is in lowercase and without accent, and the time is approximated to the nearest hour. ![CTFs/Hackday-final/Osint/[where when .jpg]] By using Google Lens we found that this pictures are Nime&amp;rsquo;s arena. Using Google maps we can determine where exactly the picture was taken. Now to find when the picture was taken we check the metadata but of course there were deleted. So we use the sun clearly visible.</description>
+      <description>**The flag format is : `city_AAAA:MM:dd_HH`** The city is in lowercase and without accent, and the time is approximated to the nearest hour. By using Google Lens we found that this pictures are Nime&amp;rsquo;s arena. Using Google maps we can determine where exactly the picture was taken. Now to find when the picture was taken we check the metadata but of course there were deleted. So we use the sun clearly visible.</description>
     </item>
     
     <item>
@@ -40,7 +39,7 @@ This SOCMINT Osint challenge start with this post that gave us the Facebook prof
       <pubDate>Sun, 16 Apr 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.cyberkoopas.fr/posts/midnight/en-osint-qualif/</guid>
-      <description>1/3 It is said that a time traveler is roaming the social networks right now... his username? &amp;#34;ibm_5100_&amp;#34; Find out more about this person. Let&amp;rsquo;s dig this username using WhatsMyName : ![[/CTFs/Midnight-qualif/Osint/1.png]] It&amp;rsquo;s fit the description about a time traveler. But nothing more&amp;hellip; ![[/CTFs/Midnight-qualif/Osint/2.png]] Since we know it&amp;rsquo;s linked to time travel, let&amp;rsquo;s use WaybackMachine to dig the past of this twitter account : ![[/CTFs/Midnight-qualif/Osint/3.png]] we found one archive with on it the first flag : !</description>
+      <description>1/3 It is said that a time traveler is roaming the social networks right now... his username? &amp;#34;ibm_5100_&amp;#34; Find out more about this person. Let&amp;rsquo;s dig this username using WhatsMyName : It&amp;rsquo;s fit the description about a time traveler. But nothing more&amp;hellip; Since we know it&amp;rsquo;s linked to time travel, let&amp;rsquo;s use WaybackMachine to dig the past of this twitter account : we found one archive with on it the first flag : First Flag : MCTF{t1M€_7r4v3L_O}</description>
     </item>
     
     <item>

@@ -72,8 +72,8 @@
   "keywords": [
     "x-pwnme", "forensic"
   ],
-  "articleBody": "Hey, I received a flash drive in my mailbox. It appears that the person who sent me the package was aware that I was using Linux. However, the flash drive self-destructed before I was able to make an image of it. To get the flag, you have to go to the showcase site of the c2 in question. This is real malware, so be careful when running it, use a vm for malware analysis Let’s import this image in Autopsy (Forensic Software), it find 3 interesting files : * 1 script .sh * 1 Pdf * 1 executable ![[CTFs/PWNME/Forensic/Pasted image 20230507000018.png]] We can see that the script install an executable “firefox.elf” in the firefox path of the victim computer and then delete the PDF, who must be the entry point of the malware.\nWe extract “firefox.elf” and upload it on VirusTotal to learn more about it. ![[CTFs/PWNME/Forensic/Pasted image 20230507000610.png]] That definitely our malware, now how can we find out it behaviour ? Two options, the first one do reverse engineering and the second one easiest and funnier launch it !\nTo do so, let’s launch it on a virtual machine, while recording all the network traffic using Wireshark. Doing so, we can see two things, a destination IP 178.62.67.181 and by following the HTTP Flow we notice a connection on 443 port. ![[CTFs/PWNME/Forensic/Pasted image 20230507001028.png]] We connect to the IP using 443 port. And we can see an image ! ![[CTFs/PWNME/Forensic/Pasted image 20230507001411.png]] We got the Flag : PWNME{1_L0V3_5L1V3R}\n",
-  "wordCount" : "249",
+  "articleBody": "Hey, I received a flash drive in my mailbox. It appears that the person who sent me the package was aware that I was using Linux. However, the flash drive self-destructed before I was able to make an image of it. To get the flag, you have to go to the showcase site of the c2 in question. This is real malware, so be careful when running it, use a vm for malware analysis Let’s import this image in Autopsy (Forensic Software), it find 3 interesting files : * 1 script .sh * 1 Pdf * 1 executable We can see that the script install an executable “firefox.elf” in the firefox path of the victim computer and then delete the PDF, who must be the entry point of the malware.\nWe extract “firefox.elf” and upload it on VirusTotal to learn more about it. That definitely our malware, now how can we find out it behaviour ? Two options, the first one do reverse engineering and the second one easiest and funnier launch it !\nTo do so, let’s launch it on a virtual machine, while recording all the network traffic using Wireshark. Doing so, we can see two things, a destination IP 178.62.67.181 and by following the HTTP Flow we notice a connection on 443 port. We connect to the IP using 443 port. And we can see an image ! We got the Flag : PWNME{1_L0V3_5L1V3R}\n",
+  "wordCount" : "237",
   "inLanguage": "en",
   "datePublished": "2023-05-06T00:00:00Z",
   "dateModified": "2023-05-06T00:00:00Z",
@@ -174,23 +174,30 @@
 </div>
   </header> 
   <div class="post-content"><pre tabindex="0"><code>Hey,  
-I received a flash drive in my mailbox. It appears that the person who sent me the package was aware that I was using Linux. However, the flash drive self-destructed before I was able to make an image of it. To get the flag, you have to go to the showcase site of the c2 in question.  
+I received a flash drive in my mailbox.
+It appears that the person who sent me the package was aware that I was using Linux.
+However, the flash drive self-destructed before I was able to make an image of it.
+To get the flag, you have to go to the showcase site of the c2 in question.  
   
 This is real malware, so be careful when running it, use a vm for malware analysis
 </code></pre><p>Let&rsquo;s import this image in Autopsy (Forensic Software), it find 3 interesting files :
 * 1 script .sh
 * 1 Pdf
 * 1 executable
-![[CTFs/PWNME/Forensic/Pasted image 20230507000018.png]]
+<img loading="lazy" src="/CTFs/PWNME/Forensic/1.png" alt="1.png"  />
+
 We can see that the script install an executable <strong>&ldquo;firefox.elf&rdquo;</strong> in the firefox path of the victim computer and then delete the PDF, who must be the entry point of the malware.</p>
 <p>We extract <strong>&ldquo;firefox.elf&rdquo;</strong>   and upload it on VirusTotal to learn more about it.
-![[CTFs/PWNME/Forensic/Pasted image 20230507000610.png]]
+<img loading="lazy" src="/CTFs/PWNME/Forensic/2.png" alt="2.png"  />
+
 That definitely our malware, now how can we find out it behaviour ? Two options, the first one do reverse engineering and the second one easiest and funnier launch it !</p>
 <p>To do so, let&rsquo;s launch it on a virtual machine, while recording all the network traffic using Wireshark.
 Doing so, we can see two things, a destination IP <strong>178.62.67.181</strong> and by following the <strong>HTTP Flow</strong> we notice a connection on <strong>443</strong> port.
-![[CTFs/PWNME/Forensic/Pasted image 20230507001028.png]]
+<img loading="lazy" src="/CTFs/PWNME/Forensic/3.png" alt="3.png"  />
+
 We connect to the IP using 443 port. And we can see an image !
-![[CTFs/PWNME/Forensic/Pasted image 20230507001411.png]]
+<img loading="lazy" src="/CTFs/PWNME/Forensic/4.png" alt="4.png"  />
+
 We got the Flag : <strong><code>PWNME{1_L0V3_5L1V3R}</code></strong></p>
 
 

@@ -72,8 +72,8 @@
   "keywords": [
     "x-hackday-final", "stegano"
   ],
-  "articleBody": "On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it's a spy-ceship from Ophiuchus, we'll need to organize an intercept mission as soon as possible. **The flag format is : `HACKDAY{xxXXxxXXxx}`** ![[CTFs/Hackday-final/Stegano/strange-aeons.png]]\nOpening the PNG file with an inspector such as TweakPNG shows 1 IHDR, 1 eXIf, 5 IDAT and 1 IEND chunks. They all seem to be well-formed. That being said, all IDAT chunks have the same length except for the second one. While technically the IDAT chunks can be of any length, the shorter one is usually the last. ![[CTFs/Hackday-final/Stegano/SteganoStrange AEONS.png]] We try few possibilities and bingo we got : ![[CTFs/Hackday-final/Stegano/strange-aeons2.png]] Nothing visible on the image so let’s check for something with zsteg : ![[CTFs/Hackday-final/Stegano/Pasted image 20230513091929.png]] Flag : HACKDAY{B3Tw33n_Ch4RyBd15_4nD_5Cy11A!}\n",
-  "wordCount" : "183",
+  "articleBody": "On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole. The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way. Can you get back the original image so we can identify the ship ? If it's a spy-ceship from Ophiuchus, we'll need to organize an intercept mission as soon as possible. **The flag format is : `HACKDAY{xxXXxxXXxx}`** Opening the PNG file with an inspector such as TweakPNG shows 1 IHDR, 1 eXIf, 5 IDAT and 1 IEND chunks. They all seem to be well-formed. That being said, all IDAT chunks have the same length except for the second one. While technically the IDAT chunks can be of any length, the shorter one is usually the last. We try few possibilities and bingo we got : Nothing visible on the image so let’s check for something with zsteg : Flag : HACKDAY{B3Tw33n_Ch4RyBd15_4nD_5Cy11A!}\n",
+  "wordCount" : "176",
   "inLanguage": "en",
   "datePublished": "2023-05-13T00:00:00Z",
   "dateModified": "2023-05-13T00:00:00Z",
@@ -175,18 +175,24 @@
   </header> 
   <div class="post-content"><pre tabindex="0"><code>On the 2nd of May, the ship XH28U23 saw a strange spacecraft hiding in an asteroid field near the Charybdis A* blackhole.
 
-The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission. They included confidential information in there, the usual way.
+The crew sent us the photo it took but the proximity of the blackhole seems to have done strange things to the asynchronous transmission.
+They included confidential information in there, the usual way.
 
-Can you get back the original image so we can identify the ship ? If it&#39;s a spy-ceship from Ophiuchus, we&#39;ll need to organize an intercept mission as soon as possible.
+Can you get back the original image so we can identify the ship ?
+If it&#39;s a spy-ceship from Ophiuchus, we&#39;ll need to organize an intercept mission as soon as possible.
 
 **The flag format is : `HACKDAY{xxXXxxXXxx}`**
-</code></pre><p>![[CTFs/Hackday-final/Stegano/strange-aeons.png]]</p>
+</code></pre><p><img loading="lazy" src="CTFs/Hackday-final/Stegano/1.png" alt="1.png"  />
+</p>
 <p>Opening the PNG file with an inspector such as <strong>TweakPNG</strong> shows 1 IHDR, 1 eXIf, 5 IDAT and 1 IEND chunks. They all seem to be well-formed. That being said, all IDAT chunks have the same length except for the second one. While technically the IDAT chunks can be of any length, the shorter one is usually the last.
-![[CTFs/Hackday-final/Stegano/SteganoStrange AEONS.png]]
+<img loading="lazy" src="CTFs/Hackday-final/Stegano/2.png" alt="2.png"  />
+
 We try few possibilities and bingo we got :
-![[CTFs/Hackday-final/Stegano/strange-aeons2.png]]
+<img loading="lazy" src="CTFs/Hackday-final/Stegano/3.png" alt="3.png"  />
+
 Nothing visible on the image so let&rsquo;s check for something with <strong>zsteg</strong> :
-![[CTFs/Hackday-final/Stegano/Pasted image 20230513091929.png]]
+<img loading="lazy" src="CTFs/Hackday-final/Stegano/4.png" alt="4.png"  />
+
 Flag : <strong><code>HACKDAY{B3Tw33n_Ch4RyBd15_4nD_5Cy11A!}</code></strong></p>
 
 

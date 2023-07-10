@@ -21,7 +21,7 @@
       <pubDate>Sat, 13 May 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.cyberkoopas.fr/posts/hackday-final/osint/en-wherewhen/</guid>
-      <description>**The flag format is : `city_AAAA:MM:dd_HH`** The city is in lowercase and without accent, and the time is approximated to the nearest hour. ![CTFs/Hackday-final/Osint/[where when .jpg]] By using Google Lens we found that this pictures are Nime&amp;rsquo;s arena. Using Google maps we can determine where exactly the picture was taken. Now to find when the picture was taken we check the metadata but of course there were deleted. So we use the sun clearly visible.</description>
+      <description>**The flag format is : `city_AAAA:MM:dd_HH`** The city is in lowercase and without accent, and the time is approximated to the nearest hour. By using Google Lens we found that this pictures are Nime&amp;rsquo;s arena. Using Google maps we can determine where exactly the picture was taken. Now to find when the picture was taken we check the metadata but of course there were deleted. So we use the sun clearly visible.</description>
     </item>
     
     <item>
